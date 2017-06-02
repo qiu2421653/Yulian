@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    <View 
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray"/>
+     <ScrollView
+        android:id="@+id/activity_selectimg_scrollView"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+     <EditText
+                    android:id="@+id/comment_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    android:hint="请输入评价的内容"
+                    android:maxLines="8"
+                    android:gravity="left|top"
+                    android:textColor="#6F6F6F"
+                    android:textColorHint="#b9b9b9" >
+                </EditText>
+                <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:background="#eef1eff5" >
+
+                <HorizontalScrollView
+                    android:id="@+id/selectimg_horizontalScrollView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="10dp"
+                    android:scrollbars="none"
+                    android:paddingRight="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal" >
+
+                        <GridView
+                            android:id="@+id/noScrollgridview"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:fastScrollEnabled="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:horizontalSpacing="0dp"
+                            android:scrollbars="none"
+                            android:scrollingCache="false"
+                            android:stretchMode="spacingWidthUniform"
+                            android:verticalSpacing="1dp" >
+                        </GridView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+                </LinearLayout>
+                </ScrollView>
+               
+	<Button 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:text="提交"/>
+</RelativeLayout>

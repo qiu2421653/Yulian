@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="@dimen/x115"
+        android:layout_height="@dimen/x130"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x25"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_item"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="鸡尾酒戒"
+        android:textColor="@color/common_text" />
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Mr.Qiu"
+        android:textColor="@color/common_tv" />
+
+    <RelativeLayout
+        android:id="@+id/rl_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/tv_cur"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_store_submit"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="$100"
+            android:textColor="@color/white"
+            android:textSize="14.0sp" />
+
+        <ImageView
+            android:id="@+id/iv_collection"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/tv_cur"
+            android:clickable="true"
+            android:paddingBottom="1dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:paddingTop="1dp"
+            android:src="@drawable/collection_selector" />
+
+        <ImageView
+            android:id="@+id/iv_frok"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/tv_cur"
+            android:clickable="true"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/fork_selector" />
+
+        <TextView
+            android:id="@+id/tv_fork"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_frok"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="20"
+            android:textColor="@color/blue1"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/rl_submit"
+        android:background="@color/view" />
+
+</RelativeLayout>

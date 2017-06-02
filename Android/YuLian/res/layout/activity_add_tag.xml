@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.njkj.yulian.AddTagActivity" >
+
+    <ListView
+        android:id="@+id/lv_tags"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:animationCache="false"
+        android:background="@color/white"
+        android:clipToPadding="false"
+        android:divider="@color/view"
+        android:dividerHeight="0.3dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollingCache="false" />
+
+</RelativeLayout>

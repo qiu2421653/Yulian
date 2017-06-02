@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30" >
+
+        <com.njkj.yulian.ui.gui.CircleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/y24"
+            android:layout_height="@dimen/y24"
+            android:layout_marginLeft="@dimen/x9"
+            android:layout_marginTop="@dimen/y4"
+            android:src="@drawable/logo"
+            app:border_color="@color/black"
+            app:border_width="0.2dp" />
+
+        <TextView
+            android:id="@+id/tv_nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/y5"
+            android:layout_marginTop="@dimen/y5"
+            android:layout_toRightOf="@id/iv_icon"
+            android:textColor="@color/common_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_createTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nickName"
+            android:layout_marginLeft="@dimen/y5"
+            android:layout_marginTop="@dimen/y1"
+            android:layout_toRightOf="@id/iv_icon"
+            android:textColor="@color/common_tv"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/iv_fork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x9"
+            android:background="@drawable/fork" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x9"
+        android:paddingRight="@dimen/x9" >
+
+        <com.njkj.yulian.ui.gui.RectRoundImageView
+            android:id="@+id/iv_themePic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y95"
+            android:src="@drawable/empty_photo"
+            app:borderRadius="3dp"
+            app:type="round" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y95"
+            android:background="@drawable/bg_topic_order" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x50"
+            android:paddingRight="@dimen/x50"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_State"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_createDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_themePic"
+            android:layout_marginTop="@dimen/y4"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/common_text"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/tv_createDescription"
+        android:layout_marginTop="@dimen/y4"
+        android:background="@color/view" />
+
+</LinearLayout>

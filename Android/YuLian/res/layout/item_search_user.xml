@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff2f2ec"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="5.0dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_search_history"
+            android:textColor="@color/common_tv"
+            android:textSize="@dimen/e_font_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="62.0dip"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <com.njkj.yulian.ui.gui.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="49.0dip"
+            android:layout_height="49.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/empty_photo"
+            app:border_color="@color/transparent"
+            app:border_width="0.0dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff545454"
+                android:textSize="13.0dip" />
+        </LinearLayout>
+
+      
+
+        <ImageView
+         android:id="@+id/iv_fork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x9"
+            android:background="@drawable/fork" />
+
+        <ImageView
+            android:id="@+id/gray_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="#ffe8e8e8"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <com.njkj.yulian.ui.gui.MultiImageView
+        android:id="@+id/mv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/x9"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+</LinearLayout>

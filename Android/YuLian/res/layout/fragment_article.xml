@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.hkkj.ailiao.MainActivity" >
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_Scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/bg_item"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/tv_hot"
+                style="@style/fragment_item_title_text"
+                android:textColor="@color/bluedc"
+                android:text="热门" />
+
+            <TextView
+                android:id="@+id/tv_new"
+                style="@style/fragment_item_title_text"
+                android:text="新上榜" />
+
+            <TextView
+                android:id="@+id/tv_first"
+                style="@style/fragment_item_title_text"
+                android:text="第一次说" />
+
+            <TextView
+                android:id="@+id/tv_double"
+                style="@style/fragment_item_title_text"
+                android:text="二人世界" />
+
+            <TextView
+                android:id="@+id/tv_love"
+                style="@style/fragment_item_title_text"
+                android:text="爱之墨迹" />
+
+            <TextView
+                android:id="@+id/tv_our"
+                style="@style/fragment_item_title_text"
+                android:text="我们故事" />
+
+            <TextView
+                android:id="@+id/tv_free"
+                style="@style/fragment_item_title_text"
+                android:text="自恋秀场" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

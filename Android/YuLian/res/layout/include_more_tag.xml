@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tag_line"
+        android:layout_width="fill_parent"
+        android:layout_height="39.0dip" >
+
+        <TextView
+            style="@style/GodlenNormalText"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14.0dip"
+            android:text="@string/_first_tag"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/tv_moretag"
+            style="@style/GodlenNormalText"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.0dip"
+            android:drawablePadding="9.0dip"
+            android:drawableRight="@drawable/square_see_all"
+            android:text="@string/more_tag"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_tag"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp" />
+
+</LinearLayout>

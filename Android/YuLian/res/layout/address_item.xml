@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/address_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView 
+        android:id="@+id/address_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/edit_text"
+        android:text="--"/>
+     <TextView 
+         android:id="@+id/address_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+         android:textColor="@color/edit_text"
+        android:text="--"/>
+     </RelativeLayout>
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+     <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="[默认]"
+         android:visibility="gone"
+         android:layout_marginRight="5dp"
+         android:textColor="@color/red"/>
+     <TextView 
+         android:id="@+id/address"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="--"
+         android:textColor="@color/edit_text"/>
+     
+     </LinearLayout>
+
+</LinearLayout>

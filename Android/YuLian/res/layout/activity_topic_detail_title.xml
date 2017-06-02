@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.njkj.yulian.ui.activity.topic.TopicActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30" >
+
+            <com.njkj.yulian.ui.gui.CircleImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="@dimen/y25"
+                android:layout_height="@dimen/y25"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x9"
+                android:src="@drawable/empty_photo"
+                app:border_color="@color/common_text"
+                app:border_width="0.5dp" />
+
+            <TextView
+                android:id="@+id/tv_nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/y5"
+                android:layout_marginTop="@dimen/y5"
+                android:layout_toRightOf="@id/iv_icon"
+                android:textColor="@color/common_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_createTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nickName"
+                android:layout_marginLeft="@dimen/y5"
+                android:layout_marginTop="@dimen/y1"
+                android:layout_toRightOf="@id/iv_icon"
+                android:textColor="@color/common_tv"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_topic_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x9"
+                android:layout_marginTop="@dimen/y5"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/bluedc"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_title"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x9"
+            android:paddingRight="@dimen/x9" >
+
+            <com.njkj.yulian.ui.gui.MultiImageView
+                android:id="@+id/imgViewStub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x9"
+                android:layout_marginRight="@dimen/x4" />
+
+            <TextView
+                android:id="@+id/tv_createDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_themePic"
+                android:layout_marginLeft="@dimen/x4"
+                android:layout_marginTop="@dimen/y3"
+                android:gravity="center_vertical"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/common_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content"
+            android:layout_marginLeft="@dimen/x9"
+            android:layout_marginRight="@dimen/x9"
+            android:layout_marginTop="@dimen/y10"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="8" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/gridview"
+            android:layout_marginTop="@dimen/y8"
+            android:background="@color/view" />
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/y5"
+            android:paddingTop="@dimen/y5" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x5"
+                android:text="评论"
+                android:textColor="@color/common_tv"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_comnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75"
+                android:textColor="@color/common_tv"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ll_comment"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_marginRight="@dimen/x8"
+            android:background="@color/view"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

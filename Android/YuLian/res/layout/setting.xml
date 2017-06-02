@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fadingEdge="none"
+    android:fadingEdgeLength="0.0dip" >
+
+    <LinearLayout
+        android:id="@+id/linear_list_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_push"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:background="@drawable/btn_list_item_bg"
+            android:onClick="onMyClick"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:drawableRight="@drawable/gywm_icon_tiaozhuan_night"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/tui_song_tong_zhi"
+                android:textColor="@color/common_text"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:background="@color/listview_divider_day" />
+
+        <LinearLayout
+            android:id="@+id/ll_clear_cache"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:background="@drawable/btn_list_item_bg"
+            android:onClick="onMyClick"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/qing_cu_huan_cun"
+                android:textColor="@color/common_text"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/color_99"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:background="@color/listview_divider_day"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_update_release"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:background="@drawable/btn_list_item_bg"
+            android:gravity="center_vertical"
+            android:onClick="onMyClick"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_check_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/ban_ben_gen_xin"
+                    android:textColor="@color/common_text"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_version_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.0dip"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/color_88"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:background="@color/listview_divider_day"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:background="@drawable/btn_list_item_bg"
+            android:onClick="onMyClick"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:drawableRight="@drawable/gywm_icon_tiaozhuan_night"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/feedback"
+                android:textColor="@color/common_text"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:background="@color/listview_divider_day" />
+
+        <LinearLayout
+            android:id="@+id/ll_about_us"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:background="@drawable/btn_list_item_bg"
+            android:onClick="onMyClick"
+            android:orientation="horizontal"
+            android:paddingLeft="18.0dip"
+            android:paddingRight="18.0dip" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:drawableRight="@drawable/gywm_icon_tiaozhuan_night"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/guan_yu_wo_men"
+                android:textColor="@color/common_text"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginLeft="18.0dip"
+            android:layout_marginRight="18.0dip"
+            android:background="@color/listview_divider_day" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26.0dip"
+                android:layout_marginTop="26.0dip"
+                android:background="@drawable/btn_loginout"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onMyClick"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="10.0dip"
+                android:text="@string/logout_current_account"
+                android:textColor="@color/bluedc"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

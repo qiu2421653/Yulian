@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	  <!--1391.129.109.204:8080 -->
+	  <!--1231.177.21.155:5252-->
+      <!--1921.168.1.106:8080  --> 
+    <string name="FsUpGrade">http://192.168.1.106:8080/YuLian/api/FsGetAppVersion</string>				<!--获得App最新版本号  -->
+    <string name="FsAddFeedBack">http://192.168.1.106:8080/YuLian/api/FsFeedBack</string>    			<!-- 反馈 -->
+    <string name="FsGetValidCode">http://192.168.1.106:8080/YuLian/api/FsGetValidCode</string>    		<!-- 发送验证码 -->
+    <string name="FsRegist">http://192.168.1.106:8080/YuLian/api/FsRegist</string>    					<!-- 注册 -->
+    <string name="FsLoad">http://192.168.1.106:8080/YuLian/api/FsLoad</string>    						<!-- 登录 -->
+    <string name="FsUpdatePwd">http://192.168.1.106:8080/YuLian/api/FsUpdatePwd</string>    			<!-- 修改密码 -->
+    <string name="FsGetTopicList">http://192.168.1.106:8080/YuLian/api/FsGetTopicList</string>    		<!-- 获得主题列表-->
+    <string name="FsGetRecommendTopicList">http://192.168.1.106:8080/YuLian/api/FsGetRecommendTopicList</string>   <!-- 获得推荐主题列表-->
+    <string name="FsSearchUser">http://192.168.1.106:8080/YuLian/api/FsSearchUser</string>    			<!-- 搜索用户-->
+    <string name="FsSearchTag">http://192.168.1.106:8080/YuLian/api/FsSearchTag</string>    			<!-- 搜索标签-->
+    <string name="FsSearchContent">http://192.168.1.106:8080/YuLian/api/FsSearchContent</string>    	<!-- 搜索内容-->
+    <string name="FsGetSearchHistory">http://192.168.1.106:8080/YuLian/api/FsGetSearchHistory</string>  <!--获得搜索栏推荐用户-->
+    <string name="FsGetSearchTag">http://192.168.1.106:8080/YuLian/api/FsGetSearchTag</string> 			<!--获得搜索栏推荐标签-->
+    <string name="FsGetSearchContent">http://192.168.1.106:8080/YuLian/api/FsGetSearchContent</string>  <!--获得搜索栏推荐内容-->
+    <string name="FsGetUserInfo">http://192.168.1.106:8080/YuLian/api/FsGetUserInfo</string>  			<!--获取用户个人信息-->
+    <string name="FsGetGold">http://192.168.1.106:8080/YuLian/api/FsGetGold</string>  					<!--获得禹币积分-->
+    <string name="FsGetCommentList">http://192.168.1.106:8080/YuLian/api/FsGetCommentList</string>  	<!--获取评论页列表集合-->
+    <string name="FsGetForksList">http://192.168.1.106:8080/YuLian/api/FsGetForksList</string>  		<!--获取点赞列表集合-->
+    <string name="FsGetUserTopicList">http://192.168.1.106:8080/YuLian/api/FsGetUserTopicList</string>  <!-- 获取指定用户主题详情列表-->
+    <string name="FsGetUserTimeLine">http://192.168.1.106:8080/YuLian/api/FsGetUserTimeLine</string>    <!-- 获得用户时间轴列表-->
+    <string name="FsGetGoldRank">http://192.168.1.106:8080/YuLian/api/FsGetGoldRank</string>   		    <!-- 获得禹币排行榜-->
+    <string name="FsGetUserTopicMovie">http://192.168.1.106:8080/YuLian/api/FsGetUserTopicMovie</string><!-- 获得用户时间轴列表-->
+    <string name="FsGetGoldDetail">http://192.168.1.106:8080/YuLian/api/FsGetGoldDetail</string>   	 	<!-- 获得禹币积分明细-->
+    <string name="FsSetTopicCareful">http://192.168.1.106:8080/YuLian/api/FsSetTopicCareful</string>    <!-- 对用户关注-->
+    <string name="FsGetTopicForks">http://192.168.1.106:8080/YuLian/api/FsGetTopicForks</string>    	<!-- 获取帖子点赞人列表-->
+    <string name="FsGetTopicComments">http://192.168.1.106:8080/YuLian/api/FsGetTopicComments</string>  <!-- 获取帖子评论列表-->
+    <string name="FsSetTopicFork">http://192.168.1.106:8080/YuLian/api/FsSetTopicFork</string> 		 	<!-- 对指定用户主题帖子点赞(取消赞)-->
+    <string name="FsSharedInfo">http://192.168.1.106:8080/YuLian/api/FsSharedInfo</string> 		 	 	<!-- 获取分享内容-->
+    <string name="FsSetTopic">http://192.168.1.106:8080/YuLian/api/FsSetTopic</string> 		 		 	<!-- 上传图片-->
+    <string name="FsGetTagList">http://192.168.1.106:8080/YuLian/api/FsGetTagList</string> 		 		<!-- 获取对应标签集合-->
+    <string name="FsReplyTopicUser">http://192.168.1.106:8080/YuLian/api/FsReplyTopicUser</string> 		<!--帖子内回复某用户-->
+    <string name="FsGetMyLoveStory">http://192.168.1.106:8080/YuLian/api/FsGetMyLoveStory</string> 	 	<!--我的爱情-->
+    <string name="FsGetForkLoveStory">http://192.168.1.106:8080/YuLian/api/FsGetForkLoveStory</string> 	<!--关注爱情-->
+    <string name="FsGetStoryDelete">http://192.168.1.106:8080/YuLian/api/FsGetStoryDelete</string> 	 	<!--删除爱情-->
+    <string name="FsGetStoryCurrent">http://192.168.1.106:8080/YuLian/api/FsGetStoryCurrent</string> 	<!--当前爱情-->
+    <string name="FsGetStoryType">http://192.168.1.106:8080/YuLian/api/FsGetStoryType</string> 	 		<!--爱情(隐藏/显示)-->
+         
+    <string name="FsEditUserInfo">http://192.168.1.106:8080/YuLian/api/FsEditUserInfo</string> 			 <!--修改用户信息-->
+    <string name="FsCreateLove">http://192.168.1.106:8080/YuLian/api/FsCreateLove</string> 	 			 <!--新建影集-->
+    <string name="FsGetTopic">http://192.168.1.106:8080/YuLian/api/FsGetTopic</string> 				 	 <!--获取对应帖子内容-->
+    <string name="FsReward">http://192.168.1.106:8080/YuLian/api/FsReward</string> 						 <!--对帖子打赏-->
+    <string name="FsCheckExperience">http://192.168.1.106:8080/YuLian/api/FsCheckExperience</string> 	 <!--经历检测-->
+    <string name="FsGetRewardList">http://192.168.1.106:8080/YuLian/api/FsGetRewardList</string> 		 <!--获取打赏页列表集合-->
+    <string name="FsReportTopic">http://192.168.1.106:8080/YuLian/api/FsReportTopic</string> 		     <!--举报帖子-->
+    <string name="FsEnumInfo">http://192.168.1.106:8080/YuLian/api/FsEnumInfo</string> 		    		 <!--获取举报帖子类别-->
+    <string name="FsGetFirstList">http://192.168.1.106:8080/YuLian/api/FsGetFirstList</string> 			 <!--获取第一次推荐标签-->
+    <string name="FsValidFace">http://192.168.1.106:8080/YuLian/api/FsValidFace</string> 			 	 <!--face++认证-->
+    <string name="FsGetUsedTags">http://192.168.1.106:8080/YuLian/api/FsGetUsedTags</string> 			 <!--获得可使用的标签-->
+    <string name="FsGetOtherLoveStory">http://192.168.1.106:8080/YuLian/api/FsGetOtherLoveStory</string> <!--获得对方的爱情经历-->
+    <string name="FsGetForkUsers">http://192.168.1.106:8080/YuLian/api/FsGetForkUsers</string> 		 <!--获取我关注的用户-->
+    <string name="FsGetRecommen">http://192.168.1.106:8080/YuLian/api/FsGetRecommen</string> 			 <!--获取推荐帖子详情-->
+    <string name="FsCreateTags">http://192.168.1.106:8080/YuLian/api/FsCreateTags</string> 			 <!--用户新建标签-->
+    <string name="FsGetHotTopic">http://192.168.1.106:8080/YuLian/api/FsGetHotTopic</string> 			 <!--热门帖-->
+    <string name="FsGetNewTopic">http://192.168.1.106:8080/YuLian/api/FsGetNewTopic</string> 			 <!--新上榜帖-->
+    <string name="FsGetTagsTopic">http://192.168.1.106:8080/YuLian/api/FsGetTagsTopic</string> 		 <!--标签主题帖-->
+    <string name="FsGetNearUses">http://192.168.1.106:8080/YuLian/api/FsGetNearUses</string> 		 	 <!--获取附近的人-->
+    <string name="FsAgreement">http://192.168.1.106:8080/YuLian/agreement.html</string> 		 	   	 <!--用户协议-->
+    
+
+</resources>
+

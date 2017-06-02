@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top_layout" />
+
+    <RelativeLayout
+        android:id="@id/top_Text"
+        android:layout_width="fill_parent"
+        android:layout_height="22.0dip"
+        android:layout_below="@id/top_layout"
+        android:background="@color/blue1"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_net"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_time"
+            android:gravity="center_vertical"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="12.0dip"
+            android:text="@string/_netvideo"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/tv_time"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="15.0dip"
+            android:text="@string/_locvideo"
+            android:textColor="@color/common_tv"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@color/blue1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <View
+                android:id="@id/time_icon"
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="center" />
+
+            <ImageView
+                android:id="@id/net_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13.0dip"
+                android:layout_toLeftOf="@id/time_icon"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="12.0dip"
+                android:scaleType="center"
+                android:src="@drawable/confession_net_selector" />
+
+            <ImageView
+                android:id="@id/loc_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/time_icon"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="20.0dip"
+                android:scaleType="center"
+                android:src="@drawable/confession_loc_selector" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:padding="14dp"
+            android:src="@drawable/image_edit_back" />
+
+        <TextView
+            android:id="@id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="@string/_edit"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

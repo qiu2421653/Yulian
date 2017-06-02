@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@id/bootbar"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@id/imagecancel"
+            android:layout_width="47.0dip"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/image_edit_cancel" />
+
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2.0dip"
+            android:layout_weight="1.0"
+            android:background="@color/darkGrey" >
+
+            <TextView
+                android:id="@id/effect_name"
+                style="@style/PanelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6.0dip"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@id/effect_progress"
+                style="@style/PanelText"
+                android:text="0%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/effect_name"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/darkSkyBlue" />
+
+            <SeekBar
+                android:id="@id/startPointSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@id/imageconfirm"
+            android:layout_width="47.0dip"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/image_edit_confirm" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        android:text="买家秀"
+        android:textColor="@color/blue1"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y35" >
+
+            <com.njkj.yulian.ui.gui.CircleImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="@dimen/y24"
+                android:layout_height="@dimen/y24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x9"
+                android:src="@drawable/logo"
+                app:border_color="@color/black"
+                app:border_width="0.2dp" />
+
+            <TextView
+                android:id="@+id/tv_nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/y5"
+                android:layout_marginTop="@dimen/y8"
+                android:layout_toRightOf="@id/iv_icon"
+                android:text="AAAAAAAA"
+                android:textColor="@color/common_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_createTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nickName"
+                android:layout_marginLeft="@dimen/y5"
+                android:layout_marginTop="@dimen/y1"
+                android:layout_toRightOf="@id/iv_icon"
+                android:text="06-01 8:50"
+                android:textColor="@color/common_tv"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/view" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y180"
+            android:paddingBottom="25dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:paddingTop="25dp"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/view" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:paddingLeft="@dimen/x15"
+            android:paddingRight="@dimen/x15" >
+
+            <ImageView
+                android:id="@+id/iv_fork"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/comment_emo_like_press" />
+
+            <TextView
+                android:id="@+id/tv_fork"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_fork"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="800"
+                android:textColor="@color/blue1" />
+
+            <ImageView
+                android:id="@+id/iv_comment"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_fork"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/titlebar_share" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_comment"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="8"
+                android:textColor="@color/blue1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

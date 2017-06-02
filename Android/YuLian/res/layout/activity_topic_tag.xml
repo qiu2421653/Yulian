@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/x9"
+        android:paddingRight="@dimen/x9" >
+
+        <com.njkj.yulian.ui.gui.RectRoundImageView
+            android:id="@+id/iv_themePic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y130"
+            android:scaleType="centerCrop"
+            app:borderRadius="3dp"
+            app:type="round" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y130"
+            android:background="@drawable/bg_theme_nor"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y130"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="@dimen/y50"
+            android:singleLine="true"
+            android:text="《太阳的后裔》为什么火"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y130"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="@dimen/y30"
+            android:singleLine="true"
+            android:text="看暖男如何教你撩妹"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_State"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_createDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_themePic"
+            android:layout_marginTop="@dimen/y4"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="  		十年前，你爱我，我逃避不见，十年后，我爱你，你不在身边。人生的错过就是如此。一刹便是永远，追悔也是纪念。在心的修行途中，绝不允许投机，面具必被撕毁，谎言必被揭穿，谁也无法幸免。"
+            android:textColor="@color/common_text"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp" >
+
+        <ImageView
+            android:id="@+id/iv_favort"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x240"
+            android:layout_marginRight="@dimen/x2"
+            android:src="@drawable/heart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_favort"
+            android:text="30"
+            android:textSize="@dimen/e_font_size" />
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x22"
+            android:layout_marginRight="@dimen/x2"
+            android:layout_toRightOf="@id/iv_favort"
+            android:src="@drawable/iv_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_comment"
+            android:text="300"
+            android:textSize="@dimen/e_font_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@id/tv_createDescription"
+        android:layout_marginTop="@dimen/y4"
+        android:background="@color/view" />
+
+</LinearLayout>

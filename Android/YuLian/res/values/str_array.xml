@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tagArray">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+    <string-array name="fontName">
+        <item>亮度</item>
+        <item>对比度 </item>
+        <item>饱和度</item>
+        <item>暗角</item>
+        <item>色温</item>
+        <item>色调</item>
+        <item>锐化 </item>
+        <item>阴影 </item>
+        <item>曝光</item>
+    </string-array>
+    <string-array name="filterName">
+        <item>原图</item>
+        <item>模糊</item>
+        <item>底片</item>
+        <item>马赛克</item>
+        <item>怀旧</item>
+        <item>灰度</item>
+    </string-array>
+    <string-array name="filterUrl">
+        <item>file:///android_asset/filter/source.png</item>
+        <item>file:///android_asset/filter/blur.png</item>
+        <item>file:///android_asset/filter/negative.png</item>
+        <item>file:///android_asset/filter/mosaic.png</item>
+        <item>file:///android_asset/filter/old.png</item>
+        <item>file:///android_asset/filter/grey.png</item>
+    </string-array>
+    <string-array name="adjustUrl">
+        <item>file:///android_asset/adjust/adjust_brightness_off.png</item>
+        <item>file:///android_asset/adjust/adjust_contrast_off.png</item>
+        <item>file:///android_asset/adjust/adjust_saturation_off.png</item>
+        <item>file:///android_asset/adjust/adjust_dark_corner_off.png</item>
+        <item>file:///android_asset/adjust/adjust_color_off.png</item>
+        <item>file:///android_asset/adjust/adjust_tone.png</item>
+        <item>file:///android_asset/adjust/adjust_sharpen_off.png</item>
+        <item>file:///android_asset/adjust/adjust_shadow_reduce_off.png</item>
+        <item>file:///android_asset/adjust/adjust_hight_light_off.png</item>
+    </string-array>
+
+</resources>

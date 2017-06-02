@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="@dimen/x15"
+        android:paddingRight="@dimen/x15" >
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:text="Go(买)"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_goodtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/btn_buy"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒"
+            android:textColor="@color/blue1"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_goodtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dip"
+            android:layout_toLeftOf="@id/btn_buy"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_cur"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="1220.0$"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/tv_ori"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="1225.0$"
+                android:textColor="@color/common_tv"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/tv_designer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="Mr.Qiu"
+                android:textColor="@color/bluedc"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="@dimen/x15"
+        android:paddingRight="@dimen/x15" >
+
+        <TextView
+            android:id="@+id/tv_goodDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒鸡尾酒戒"
+            android:textColor="@color/blue1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:paddingLeft="@dimen/x15"
+        android:paddingRight="@dimen/x15" >
+
+        <ImageView
+            android:id="@+id/iv_fork"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/comment_emo_like_press" />
+
+        <TextView
+            android:id="@+id/tv_fork"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_fork"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="800"
+            android:textColor="@color/blue1" />
+
+        <ImageView
+            android:id="@+id/iv_collection"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_fork"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/titlebar_share" />
+    </RelativeLayout>
+
+</LinearLayout>

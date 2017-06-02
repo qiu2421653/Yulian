@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:miles="http://schemas.android.com/apk/res/com.ckt.vas.miles"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dip" >
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@null" />
+
+        <ImageView
+            android:id="@+id/cover_track"
+            android:layout_width="1.0dip"
+            android:layout_height="26.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="42.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/feed_item_track" />
+
+        <ImageView
+            android:id="@+id/cover_nowdot"
+            android:layout_width="13.0dip"
+            android:layout_height="13.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="23.0dip"
+            android:layout_marginLeft="36.0dip"
+            android:src="@drawable/cover_nowdot" />
+
+        <com.njkj.yulian.ui.gui.CircularImage
+            android:id="@+id/avatar"
+            android:layout_width="62.0dip"
+            android:layout_height="62.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="43.0dip"
+            android:src="@drawable/logo" />
+
+        <!-- friend apply request -->
+    </RelativeLayout>
+
+</LinearLayout>

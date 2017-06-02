@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_title_size">24sp</dimen>
+    <dimen name="image_edit_text_padding">7dp</dimen>
+    <dimen name="image_edit_text_size">16sp</dimen>
+    <dimen name="gudieview_width">6dp</dimen>
+    <dimen name="gudieview_heigh">6dp</dimen>
+    <dimen name="e_font_size">12sp</dimen>
+    <dimen name="a_font_size">14sp</dimen>
+    <dimen name="d_font_size">14.0dip</dimen>
+    <dimen name="fastscroll_thumb_width">64dp</dimen>
+    <dimen name="fastscroll_thumb_height">52dp</dimen>
+    <dimen name="fastscroll_overlay_size">104dp</dimen>
+    <dimen name="color_wheel_radius">124dp</dimen>
+    <dimen name="color_wheel_thickness">8dp</dimen>
+    <dimen name="color_center_halo_radius">60dp</dimen>
+    <dimen name="color_center_radius">54dp</dimen>
+    <dimen name="color_pointer_halo_radius">18dp</dimen>
+    <dimen name="color_pointer_radius">14dp</dimen>
+    <!-- Standart dimens for the bars -->
+    <dimen name="bar_thickness">4dp</dimen>
+    <dimen name="bar_length">240dp</dimen>
+    <dimen name="bar_pointer_radius">6dp</dimen>
+    <dimen name="bar_pointer_halo_radius">14dp</dimen>
+    <dimen name="load_more_footer_height_classic">60dp</dimen>
+    <dimen name="refresh_header_height_twitter">80dp</dimen>
+    <dimen name="load_more_footer_height_twitter">60dp</dimen>
+    <dimen name="dp">10dp</dimen>
+    <dimen name="flexible_space_image_height">320dp</dimen>
+    <dimen name="parallax_image_height">260dp</dimen>
+    <dimen name="floating_action_button_size_normal">56dp</dimen>
+    <dimen name="floating_action_button_elevation">4dp</dimen>
+    <dimen name="floating_action_button_shadow_radius">6dp</dimen>
+
+</resources>

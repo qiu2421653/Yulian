@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp" >
+
+    <ImageView
+        android:id="@+id/id_index_gallery_item_image"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10.0dip"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_item_tag"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="#55000000"
+        android:gravity="center"
+        android:text="大连"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

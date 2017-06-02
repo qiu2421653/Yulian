@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/listview_divider_day" />
+
+    <com.njkj.yulian.ui.gui.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view"
+        android:background="@color/blue1"
+        app:swipe_style="classic" >
+
+        <ListView
+            android:id="@id/swipe_target"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:animationCache="false"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:divider="@color/listview_divider_day"
+            android:dividerHeight="0.4dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false" />
+    </com.njkj.yulian.ui.gui.swipetoloadlayout.SwipeToLoadLayout>
+
+    <com.njkj.yulian.ui.gui.loading.LoadingView
+        android:id="@+id/fl_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

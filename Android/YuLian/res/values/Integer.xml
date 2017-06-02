@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 分页请求数 -->
+    <integer name="pCount">20</integer>
+    <integer name="poiRadius">10000</integer>
+    <integer name="poiNumber">15</integer>
+    
+    <!-- 操作系统类型0:Android客户端,1:Ios客户端,2:WindowsPhones客户端 -->
+    <integer name="syscode">0</integer>
+
+</resources>

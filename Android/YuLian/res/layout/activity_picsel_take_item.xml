@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="2.5dip" >
+
+    <ImageView
+        android:id="@+id/id_item_image"
+        android:layout_width="@dimen/y50"
+        android:layout_height="@dimen/y50"
+        android:scaleType="centerCrop"
+        android:src="@drawable/selpiccamera" />
+
+</RelativeLayout>

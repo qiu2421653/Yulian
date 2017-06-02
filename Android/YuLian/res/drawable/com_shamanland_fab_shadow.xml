@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <padding
+        android:bottom="@dimen/floating_action_button_shadow_radius"
+        android:left="@dimen/floating_action_button_shadow_radius"
+        android:right="@dimen/floating_action_button_shadow_radius"
+        android:top="@dimen/floating_action_button_shadow_radius" />
+
+</shape>

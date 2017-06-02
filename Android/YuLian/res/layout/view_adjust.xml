@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/person"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.0"
+    android:background="@color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="63.0dip"
+        android:layout_height="63.0dip"
+        android:layout_margin="5.0dip" >
+
+        <ImageView
+            android:id="@id/iv_icon"
+            android:layout_width="63.0dip"
+            android:layout_height="63.0dip"
+            android:background="@drawable/panel_bg_selector"
+            android:scaleType="center"
+            android:src="@drawable/sticker_on" />
+
+        <View
+            android:id="@id/person_line"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/darkSkyBlue"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/tv_desc"
+        style="@style/PanelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/person_image" />
+
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">禹恋</string>
+    <string name="_cancel">取消</string>
+    <string name="save_btn">保存</string>
+    <string name="_sendinfo">发送</string>
+    <string name="title_center">禹恋</string>
+    <string name="attach_smile">表情</string>
+    <string name="attach_picture">图片</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="_info_sign">分享新鲜事...</string>
+    <string name="nickname">昵称</string>
+    <string name="sax">性别</string>
+    <string name="age">年龄</string>
+    <string name="face_parts">面部</string>
+    <string name="professional">职业</string>
+    <string name="company">公司</string>
+    <string name="school">学校</string>
+    <string name="home">所在地</string>
+    <string name="person">信息采集</string>
+    <string name="error">网络或服务器异常</string>
+    <string name="net_error">网络连接失败,请检查网络</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_finish">加载完毕</string>
+    <string name="load_fail">加载失败</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="loading">加载中...</string>
+    <string name="saving">保存中...</string>
+    <string name="face_person">Face登录</string>
+    <string name="login">登录</string>
+    <string name="registered">注册</string>
+    <string name="update_password">修改密码</string>
+    <string name="forgot_password">忘记密码?</string>
+    <string name="other_login">其他方式登录</string>
+    <string name="login_message">注册即表示同意</string>
+    <string name="login_user">《禹恋用户使用协议》</string>
+    <string name="verification">获取语音验证码</string>
+    <string name="verification_update">重新获取验证码</string>
+    <string name="personal">个人信息</string>
+    <string name="mylove">我的爱情</string>
+    <string name="myintegral">禹币积分</string>
+    <string name="forwarding">转发</string>
+    <string name="evaluation">评价</string>
+    <string name="hasevaluation">评价了</string>
+    <string name="praise">点赞</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about">关于禹恋</string>
+    <string name="versionupdate">版本升级</string>
+    <string name="clearcache">清除缓存</string>
+    <string name="login_out">退出登录</string>
+    <string name="setting">设置</string>
+    <string name="push_setting">推送设置</string>
+    <string name="personal_center">个人中心</string>
+    <string name="editor">编辑</string>
+    <string name="focus_love">关注爱情</string>
+    <string name="_send_comments">发布评论</string>
+    <string name="topic_detail">详细</string>
+    <string name="identify">禹恋号</string>
+    <string name="lovetheme">爱情主题</string>
+    <string name="_favort">赞</string>
+    <string name="_voice">voice</string>
+    <string name="concern_detail">赞的人</string>
+    <string name="lovehtemt_img">添加封面</string>
+    <string name="lovehtemt_title">恋爱宣言</string>
+    <string name="_text">文字</string>
+    <string name="_photo">图片</string>
+    <string name="yjfk">意见反馈</string>
+    <string name="_mStringShow">Lovestory</string>
+    <string name="about_center">致力于打造最优秀的恋爱社区</string>
+    <string name="no_network">你的网络太卡了</string>
+    <string name="weibo">微博</string>
+    <string name="weixin">微信</string>
+    <string name="weixin_friend">朋友圈</string>
+    <string name="douban">豆瓣</string>
+    <string name="qq">QQ好友</string>
+    <string name="renren">人人</string>
+    <string name="qq_zone">QQ空间</string>
+    <string name="send_comment">发送评论～</string>
+    <string name="reward">打赏</string>
+    <string name="hasreward">打赏了</string>
+    <string name="like">列表</string>
+    <string name="time">时间轴</string>
+    <string name="search_box_hint">搜索用户名/标签/内容</string>
+    <string name="_search_tag">标签</string>
+    <string name="_search_content">内容</string>
+    <string name="_search_map">地图</string>
+    <string name="_search_user">用户</string>
+    <string name="_search_history">历史记录</string>
+    <string name="_search_recommend">推荐用户</string>
+    <string name="_me">我的</string>
+    <string name="_square">广场</string>
+    <string name="_mall">商城</string>
+    <string name="_story">故事</string>
+    <string name="_move">视频</string>
+    <string name="msg_default_status">将二维码放入框内，即可自动扫描</string>
+    <string name="person_image">人像</string>
+    <string name="origin_image">原图</string>
+    <string name="food_image">美食</string>
+    <string name="landscape_image">风景</string>
+    <string name="contrast">对比度</string>
+    <string name="edit_subtitle">编辑字幕</string>
+    <string name="next_apply">下一步</string>
+    <string name="or_code">二维码</string>
+    <string name="image_edit_better">优化</string>
+    <string name="image_edit_filter">滤镜</string>
+    <string name="image_edit_sticker">贴纸</string>
+    <string name="image_edit_font">文字</string>
+    <string name="image_edit_adjust">调整</string>
+    <string name="imageview_content_description"></string>
+    <string name="hint">提示</string>
+    <string name="login_out_exit_dialog_message">是否退出当前账号</string>
+    <string name="record_camera_exit_dialog_message">是否放弃这段视频？</string>
+    <string name="record_camera_cancel_dialog_yes">确定</string>
+    <string name="record_camera_cancel_dialog_no">取消</string>
+    <string name="record_camera_progress_message">正在转码…</string>
+    <string name="record_video_transcoding_faild">视频转码失败</string>
+    <string name="_confession">我的视频</string>
+    <string name="_netvideo">在线</string>
+    <string name="_locvideo">本地</string>
+    <string name="_edit">编辑</string>
+    <string name="_filter">滤镜</string>
+    <string name="text_size">30</string>
+    <string name="myintegral_pay">充值</string>
+    <string name="gz"> 什么是禹币? \n
+		每一位注册登录“禹恋”App的朋友们，就可以成功加入禹币的积分系统。禹币是禹恋新纳入应用中的一种虚拟货币，目的是为了奖励在禹恋中活跃 的用户兑换商品的服务。
+		如何快速获取禹币? \n
+		获取禹币的行为: \n
+		1.完善个人资料 50,个人资料全部完善后获得，1个用户仅限一次\n
+		2.发帖子 10/次,每日可完成次数3次，超出次数不加禹币。\n	
+		3.评论 1/次,每日可完成次数10次，超出次数不加禹币。\n
+		4.点赞 1/次,每日可完成次数10次，超出次数不加禹币。\n
+		5.帖子加标签 5/次，每日可完成次数3次，\n
+		6.关注排名前10名，每天领取10/天。\n
+		7.受到别人关注将获取10/次，每个用户首次关注给与。\n
+		8.商品好评发帖子获取相对应的禹币，\n
+		9.举报用户不良信息，确认后给与50/次。\n
+		禹币怎么花? \n
+		你可以在商城中兑换你所心仪的礼物送给你心爱的她（他）。\n
+		禹恋将对恶意刷禹币的用户做出如下处理：\n
+		第一次作弊\n
+		没收所有禹币，并加入监控名单；\n
+		第二次作弊\n
+		没收所有禹币并永久封号，不接受任何形式申诉。\n
+		相关说明\n
+		禹币相关活动与Apple无关，最终解释权归禹恋所有。</string>
+    <string name="integral">                    什么是积分?  \n
+		每一位注册登录“禹恋”App的朋友们，积分是你升级的凭证，当你升到对应的等级时会开启对应的功能。
+		如何快速获取积分? \n
+		获积分的行为: \n
+		1.完善个人资料 50，个人资料全部完善后获得，1个用户仅限一次\n	
+		2.发帖子 20/次	每日可完成次数3次，超出次数不加积分。\n	
+		3.评论 5/次，每日可完成次数10次，超出次数不加积分。\n
+		4.点赞 5/次，每日可完成次数10次，超出次数不加积分。\n
+		5.帖子加标签 10/次。每日可完成次数3次。\n
+		6.关注排名前10名，每天领取20积分。\n		
+		7.受到关注将获取20积分数量，每个用户首次关注给与。\n
+		8.商品好评发帖子，40/次。\n
+		9.举报用户不良信息，审核后给与100/次。	\n
+		用户等级积分说明\n
+		LV1积分100积分\n
+		LV2积分300积分\n
+		LV3积分600积分\n
+		LV4积分1000积分\n
+		LV5积分1500积分\n
+		LV6积分2400积分\n
+		LV7积分3000积分\n
+		LV8积分4000积分\n
+		LV9积分5500积分\n
+		LV10积分7000积分\n
+		LV11积分8500积分\n
+		LV12积分10000积分\n
+		相关说明\n
+		积分相关活动与Apple无关，最终解释权归禹恋所有。</string>
+    <string name="more_tag">更多标签</string>
+    <string name="_first_tag">\"第一次\"</string>
+    <string name="_recomm_tag">\"推荐\"</string>
+    <string name="add_tag">添加标签</string>
+    <string name="_createTag">新建</string>
+    <string name="_input_tag">请输入标签</string>
+    <string name="_create_tag">新建标签</string>
+    <string name="_trends">流行</string>
+    <string name="_category">分类</string>
+    <string name="_one">One</string>
+    <string name="_article">文章</string>
+    <string name="_recommend">推荐</string>
+    <string name="_hot">热门</string>
+    <string name="_mystore">我的商品</string>
+    <string name="_seller">商家</string>
+    <string name="common_setting">通用设置</string>
+    <string name="tui_song_tong_zhi">推送通知</string>
+    <string name="reward_setting">打赏设置</string>
+    <string name="app_info">应用信息</string>
+    <string name="qing_cu_huan_cun">清除缓存</string>
+    <string name="ban_ben_gen_xin">版本更新</string>
+    <string name="guan_yu_wo_men">关于我们</string>
+    <string name="logout_current_account">退出当前账号</string>
+    <string name="_receiver_push">接收推送通知</string>
+    <string name="remind_mode">提醒方式</string>
+    <string name="remind_by_shake">震动提示</string>
+    <string name="remind_by_voice">声音提示</string>
+    <string name="push_items">推送项目</string>
+    <string name="ping_lun">评论</string>
+    <string name="comment_tips">你的文章被评论或者你在评论中被@到</string>
+    <string name="xi_huan">喜欢</string>
+    <string name="likes_tips">其他用户喜欢了你的文章</string>
+    <string name="guan_zhu">关注</string>
+    <string name="follow_tips">被恋友关注</string>
+    <string name="jing_xuan">精选</string>
+    <string name="daily_tips">每日为您推送优质内容</string>
+    <string name="other_tips">专题,文集被关注等</string>
+    <string name="_myfous">我的关注</string>
+    <string name="error_occurred_explanation">发生意外错误 \n非常抱歉</string>
+    <string name="restart_app">重启</string>
+    <string name="close_app">关闭</string>
+    <string name="agreement">用户协议</string>
+
+</resources>

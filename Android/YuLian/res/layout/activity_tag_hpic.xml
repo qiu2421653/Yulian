@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.njkj.yulian.ui.gui.RectRoundImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="63dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        app:borderRadius="3dp"
+        app:type="round" />
+
+</LinearLayout>

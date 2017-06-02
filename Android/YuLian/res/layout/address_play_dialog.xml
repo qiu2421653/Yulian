@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/play_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_bgtop"
+            android:orientation="vertical"
+           android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="请输入登录密码"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1213"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="禹币"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="双立人TWIN Classic ll 20厘米深烧锅"
+                android:background="#00ABF3"
+               android:paddingBottom="10dp"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="线上支付"
+            android:textColor="@color/edit_text"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/gray"
+                android:orientation="horizontal"
+                android:paddingLeft="1dp" >
+
+                <ImageView
+                    android:id="@+id/play_num1"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/play_num2"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/play_num3"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/play_num4"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/play_num5"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/play_num6"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/play_password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:maxLength="6"
+                android:inputType="number"
+                android:textColor="#00000000" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/play_disimiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/play_disimiss"
+                android:textColor="@color/edit_text"
+                android:text="取消" />
+
+            <Button
+                android:id="@+id/play_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/play_bgtop"
+                android:text="支付" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

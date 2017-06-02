@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/search_tag"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff2f2ec"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="5.0dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近搜索"
+            android:textColor="@color/common_tv"
+            android:textSize="@dimen/e_font_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="62.0dip" >
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23.0dip"
+            android:layout_marginRight="23.0dip"
+            android:text="\#"
+            android:textColor="@color/common_tv"
+            android:textSize="25.0dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tag"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dd"
+                android:textColor="@color/common_text"
+                android:textSize="@dimen/a_font_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/gray_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="#ffdadada" />
+    </RelativeLayout>
+
+</LinearLayout>

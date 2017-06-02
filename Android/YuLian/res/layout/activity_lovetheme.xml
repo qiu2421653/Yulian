@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y95"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/lovetheme_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/lovetheme_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lovehtemt_img"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/mylovetheme_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/lovehtemt_title"
+            android:textColor="@color/lovetheme_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray"
+            android:focusable="true" />
+
+        <EditText
+            android:id="@+id/lovetheme_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="top|left"
+            android:hint="请输入正文(建议30字内)"
+            android:maxLength="50"
+            android:maxLines="10"
+            android:background="@android:color/transparent"
+            android:minLines="10"
+            android:padding="5dp"
+            android:textColor="@color/edit_text"
+            android:textColorHint="#ccc" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/lovetheme_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="发布"
+        android:textColor="@color/edit_text"
+        android:textSize="16sp" />
+
+</LinearLayout>

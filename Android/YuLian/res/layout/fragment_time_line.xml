@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:miles="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/timeline_track"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="42.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/feed_item_track"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.njkj.yulian.ui.gui.ExtendedListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="10.0px"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="vertical"
+        android:scrollingCache="false"
+        android:visibility="gone" />
+
+    <com.njkj.yulian.ui.gui.loading.LoadingView
+        android:id="@+id/fl_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

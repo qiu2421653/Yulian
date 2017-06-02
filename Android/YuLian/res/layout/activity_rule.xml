@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.hkkj.didipark.activity.BalanceinquiryActivity" >
+
+    <RelativeLayout
+        android:id="@+id/fragment_title_head"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#404040"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="14dp"
+            android:src="@drawable/image_edit_back" />
+
+        <com.njkj.yulian.ui.gui.smoothTab.SmoothTabTitle
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rule_bg" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/fragment_title_head" />
+
+</RelativeLayout>

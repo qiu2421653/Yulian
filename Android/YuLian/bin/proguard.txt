@@ -1,0 +1,450 @@
+# view res/layout/activity_ac_guide.xml #generated:8
+# view res/layout/activity_article.xml #generated:10
+# view res/layout/activity_goods.xml #generated:130
+# view res/layout/activity_photo.xml #generated:7
+# view res/layout/activity_rule.xml #generated:32
+# view res/layout/activity_search.xml #generated:50
+# view res/layout/activity_store.xml #generated:10
+# view res/layout/activity_theme.xml #generated:10
+# view res/layout/activity_upload_info.xml #generated:79
+# view res/layout/activity_upload_info.xml #generated:93
+# view res/layout/fragment_article.xml #generated:63
+# view res/layout/fragment_confession_page.xml #generated:6
+# view res/layout/fragment_home_page.xml #generated:6
+# view res/layout/fragment_theme.xml #generated:33
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/fragment_edit_image_sticker_type.xml #generated:20
+# view res/layout/fragment_edit_image_sticker_type.xml #generated:40
+# view res/layout/include_more_tag.xml #generated:31
+# view res/layout/include_recomm_tag.xml #generated:31
+-keep class android.support.v7.widget.RecyclerView { <init>(...); }
+
+# view AndroidManifest.xml #generated:411
+-keep class cn.jpush.android.service.AlarmReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:368
+-keep class cn.jpush.android.service.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:388
+-keep class cn.jpush.android.service.PushReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:376
+-keep class cn.jpush.android.service.PushService { <init>(...); }
+
+# view AndroidManifest.xml #generated:349
+-keep class cn.jpush.android.ui.PopWinActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:355
+-keep class cn.jpush.android.ui.PushActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:342
+-keep class com.baidu.location.f { <init>(...); }
+
+# view res/layout/activity_search_map_fragment.xml #generated:7
+-keep class com.baidu.mapapi.map.MapView { <init>(...); }
+
+# view AndroidManifest.xml #generated:219
+-keep class com.jarlen.picturetest.SourceFilterActivity { <init>(...); }
+
+# view res/layout/crop_image_view.xml #generated:13
+-keep class com.js.photosdk.crop.CropOverlayView { <init>(...); }
+
+# view AndroidManifest.xml #generated:59
+-keep class com.mob.tools.MobUIShell { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.njkj.yulian.MainApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.njkj.yulian.core.crash.DefaultErrorActivity { <init>(...); }
+
+# view res/layout/item_pager_image.xml #generated:6
+-keep class com.njkj.yulian.core.lib.photoview.PhotoView { <init>(...); }
+
+# view AndroidManifest.xml #generated:416
+-keep class com.njkj.yulian.core.receiver.MyReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:164
+-keep class com.njkj.yulian.ui.activity.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:128
+-keep class com.njkj.yulian.ui.activity.AddConcernActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:295
+-keep class com.njkj.yulian.ui.activity.AddaddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:318
+-keep class com.njkj.yulian.ui.activity.AgreementActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:116
+-keep class com.njkj.yulian.ui.activity.CameraPreview { <init>(...); }
+
+# view AndroidManifest.xml #generated:298
+-keep class com.njkj.yulian.ui.activity.ClipImageActivity { <init>(...); }
+
+# view res/layout/num1.xml #generated:10
+-keep class com.njkj.yulian.ui.activity.ClipImageLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:151
+-keep class com.njkj.yulian.ui.activity.CommentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:245
+-keep class com.njkj.yulian.ui.activity.ConfessionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:321
+-keep class com.njkj.yulian.ui.activity.EditAddress { <init>(...); }
+
+# view AndroidManifest.xml #generated:289
+-keep class com.njkj.yulian.ui.activity.Evaluation { <init>(...); }
+
+# view AndroidManifest.xml #generated:336
+-keep class com.njkj.yulian.ui.activity.EvaluationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:283
+-keep class com.njkj.yulian.ui.activity.GoodDetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:280
+-keep class com.njkj.yulian.ui.activity.GoodDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:292
+-keep class com.njkj.yulian.ui.activity.GoodDetailAddress { <init>(...); }
+
+# view AndroidManifest.xml #generated:90
+-keep class com.njkj.yulian.ui.activity.GuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.njkj.yulian.ui.activity.ImagePagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:135
+-keep class com.njkj.yulian.ui.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:171
+-keep class com.njkj.yulian.ui.activity.LoveThemeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:94
+-keep class com.njkj.yulian.ui.activity.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:249
+-keep class com.njkj.yulian.ui.activity.MoreTagActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:263
+-keep class com.njkj.yulian.ui.activity.MyFocusActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:271
+-keep class com.njkj.yulian.ui.activity.MyIntegralActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:274
+-keep class com.njkj.yulian.ui.activity.MyIntegralDetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:324
+-keep class com.njkj.yulian.ui.activity.MyIntegralPay { <init>(...); }
+
+# view AndroidManifest.xml #generated:277
+-keep class com.njkj.yulian.ui.activity.MyIntegralTopActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:330
+-keep class com.njkj.yulian.ui.activity.MyStoryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:148
+-keep class com.njkj.yulian.ui.activity.MyloveActivityNew { <init>(...); }
+
+# view AndroidManifest.xml #generated:260
+-keep class com.njkj.yulian.ui.activity.OtherLoveActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:327
+-keep class com.njkj.yulian.ui.activity.PayDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:154
+-keep class com.njkj.yulian.ui.activity.PersonalActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:286
+-keep class com.njkj.yulian.ui.activity.PhoneDetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:333
+-keep class com.njkj.yulian.ui.activity.PhotoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:168
+-keep class com.njkj.yulian.ui.activity.PraiseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:314
+-keep class com.njkj.yulian.ui.activity.PushSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:140
+-keep class com.njkj.yulian.ui.activity.RegisteredActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:267
+-keep class com.njkj.yulian.ui.activity.ReportActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:232
+-keep class com.njkj.yulian.ui.activity.RuleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:204
+-keep class com.njkj.yulian.ui.activity.ScannerQRCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:144
+-keep class com.njkj.yulian.ui.activity.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:196
+-keep class com.njkj.yulian.ui.activity.ShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:301
+-keep class com.njkj.yulian.ui.activity.ShoppActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.njkj.yulian.ui.activity.StartActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:159
+-keep class com.njkj.yulian.ui.activity.YJFKActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:113
+-keep class com.njkj.yulian.ui.activity.filter.CameraFilterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:110
+-keep class com.njkj.yulian.ui.activity.filter.ImageFilterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:229
+-keep class com.njkj.yulian.ui.activity.image.AddWatermarkActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:222
+-keep class com.njkj.yulian.ui.activity.image.ImageEditActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:226
+-keep class com.njkj.yulian.ui.activity.image.PicFilterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:307
+-keep class com.njkj.yulian.ui.activity.map.MapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:177
+-keep class com.njkj.yulian.ui.activity.reward.RewardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:180
+-keep class com.njkj.yulian.ui.activity.reward.RewardMoneyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:174
+-keep class com.njkj.yulian.ui.activity.search.SearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:193
+-keep class com.njkj.yulian.ui.activity.search.SearchItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:256
+-keep class com.njkj.yulian.ui.activity.store.StoreDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:252
+-keep class com.njkj.yulian.ui.activity.store.StoreTypeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:187
+-keep class com.njkj.yulian.ui.activity.timeline.TimeLineActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:119
+-keep class com.njkj.yulian.ui.activity.topic.TopicActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class com.njkj.yulian.ui.activity.topic.TopicDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:190
+-keep class com.njkj.yulian.ui.activity.topic.TopicRecommenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:184
+-keep class com.njkj.yulian.ui.activity.topic.TopicRewardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:304
+-keep class com.njkj.yulian.ui.activity.upload.AddTagActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:310
+-keep class com.njkj.yulian.ui.activity.upload.CreateTagActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:131
+-keep class com.njkj.yulian.ui.activity.upload.ExhibitionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:210
+-keep class com.njkj.yulian.ui.activity.upload.FilterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:107
+-keep class com.njkj.yulian.ui.activity.upload.PicSelActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:102
+-keep class com.njkj.yulian.ui.activity.upload.UploadInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:235
+-keep class com.njkj.yulian.ui.activity.video.MediaRecorderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:241
+-keep class com.njkj.yulian.ui.activity.video.VideoPlayerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:207
+-keep class com.njkj.yulian.ui.activity.zxing.ResultActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:216
+-keep class com.njkj.yulian.ui.fragment.IntegralFragment { <init>(...); }
+
+# view res/layout/activity_comment_list.xml #generated:15
+# view res/layout/activity_concern_item.xml #generated:14
+# view res/layout/activity_hpic.xml #generated:9
+# view res/layout/activity_integraltop.xml #generated:25
+# view res/layout/activity_praise.xml #generated:13
+# view res/layout/activity_reward_list.xml #generated:15
+# view res/layout/activity_rewardinput.xml #generated:36
+# view res/layout/activity_topic.xml #generated:12
+# view res/layout/activity_topic_detail_title.xml #generated:19
+# view res/layout/activity_topic_reward.xml #generated:19
+# view res/layout/activitymyfocus.xml #generated:14
+# view res/layout/goods_show.xml #generated:33
+# view res/layout/item_search_user.xml #generated:35
+# view res/layout/layout_parent.xml #generated:16
+# view res/layout/myintegral_item.xml #generated:37
+# view res/layout/myintegral_pay.xml #generated:17
+# view res/layout/mylove_header.xml #generated:147
+# view res/layout/paydetail_list.xml #generated:18
+-keep class com.njkj.yulian.ui.gui.CircleImageView { <init>(...); }
+
+# view res/layout/activity_map.xml #generated:7
+# view res/layout/personalcenter.xml #generated:26
+# view res/layout/time_line_cover_row.xml #generated:38
+-keep class com.njkj.yulian.ui.gui.CircularImage { <init>(...); }
+
+# view res/layout/activity_comment.xml #generated:2
+-keep class com.njkj.yulian.ui.gui.CustomExpandableListView { <init>(...); }
+
+# view res/layout/expression_gridview.xml #generated:7
+# view res/layout/lovetag_gridview.xml #generated:7
+-keep class com.njkj.yulian.ui.gui.ExpandGridView { <init>(...); }
+
+# view res/layout/fragment_time_line.xml #generated:24
+-keep class com.njkj.yulian.ui.gui.ExtendedListView { <init>(...); }
+
+# view res/layout/activity_imagepager.xml #generated:7
+-keep class com.njkj.yulian.ui.gui.ImageViewPager { <init>(...); }
+
+# view res/layout/activity_topic_detail_title.xml #generated:72
+# view res/layout/activity_topic_recommen.xml #generated:43
+# view res/layout/activity_topic_reward.xml #generated:72
+# view res/layout/item_search_user.xml #generated:83
+# view res/layout/viewstub_img.xml #generated:6
+# view res/layout/viewstub_imgbody.xml #generated:6
+-keep class com.njkj.yulian.ui.gui.MultiImageView { <init>(...); }
+
+# view res/layout/layout_parent.xml #generated:74
+-keep class com.njkj.yulian.ui.gui.MyListView { <init>(...); }
+
+# view res/layout/activity_home_list.xml #generated:1
+# view res/layout/activity_listview.xml #generated:1
+-keep class com.njkj.yulian.ui.gui.PullToRefreshLayout { <init>(...); }
+
+# view res/layout/activity_home_list.xml #generated:11
+# view res/layout/activity_listview.xml #generated:11
+-keep class com.njkj.yulian.ui.gui.PullableListView { <init>(...); }
+
+# view res/layout/activity_tag_hpic.xml #generated:9
+# view res/layout/activity_topic.xml #generated:59
+# view res/layout/activity_topic_tag.xml #generated:15
+# view res/layout/mylovenew_item.xml #generated:38
+# view res/layout/otherlove_item.xml #generated:10
+-keep class com.njkj.yulian.ui.gui.RectRoundImageView { <init>(...); }
+
+# view res/layout/include_viewpager.xml #generated:11
+-keep class com.njkj.yulian.ui.gui.advert.CBLoopViewPager { <init>(...); }
+
+# view res/layout/activity_advert.xml #generated:7
+-keep class com.njkj.yulian.ui.gui.advert.ConvenientBanner { <init>(...); }
+
+# view AndroidManifest.xml #generated:213
+-keep class com.njkj.yulian.ui.gui.camera.CameraActivity { <init>(...); }
+
+# view res/layout/activity_store_parallax.xml #generated:53
+# view res/layout/activity_store_type.xml #generated:34
+-keep class com.njkj.yulian.ui.gui.fab.FloatingActionButton { <init>(...); }
+
+# view res/layout/acitvity_home.xml #generated:26
+# view res/layout/activity_add_concern.xml #generated:27
+# view res/layout/activity_favort.xml #generated:30
+# view res/layout/activity_integraldetail.xml #generated:36
+# view res/layout/activity_search_fragment.xml #generated:25
+# view res/layout/activity_share.xml #generated:71
+# view res/layout/activity_store_type.xml #generated:45
+# view res/layout/activity_topic_detail.xml #generated:109
+# view res/layout/activity_topic_list.xml #generated:23
+# view res/layout/activity_trends.xml #generated:19
+# view res/layout/fragment_time_line.xml #generated:36
+-keep class com.njkj.yulian.ui.gui.loading.LoadingView { <init>(...); }
+
+# view AndroidManifest.xml #generated:200
+-keep class com.njkj.yulian.ui.gui.move.FullScreenActivity { <init>(...); }
+
+# view res/layout/activity_fullscreen.xml #generated:7
+# view res/layout/movie_item.xml #generated:7
+-keep class com.njkj.yulian.ui.gui.move.VideoPlayer { <init>(...); }
+
+# view res/layout/activity_store_parallax.xml #generated:19
+-keep class com.njkj.yulian.ui.gui.observablescrollview.ObservableListView { <init>(...); }
+
+# view res/layout/activity_search_detail.xml #generated:9
+-keep class com.njkj.yulian.ui.gui.pla.XListView { <init>(...); }
+
+# view res/layout/layout_refresh_footer.xml #generated:2
+-keep class com.njkj.yulian.ui.gui.pullview.ClassicLoadMoreFooterView { <init>(...); }
+
+# view res/layout/layout_refresh_footer.xml #generated:12
+-keep class com.njkj.yulian.ui.gui.pullview.ProgressWheel { <init>(...); }
+
+# view res/layout/activity_rule.xml #generated:24
+-keep class com.njkj.yulian.ui.gui.smoothTab.SmoothTabTitle { <init>(...); }
+
+# view res/layout/acitvity_home.xml #generated:7
+# view res/layout/activity_add_concern.xml #generated:7
+# view res/layout/activity_favort.xml #generated:7
+# view res/layout/activity_integraldetail.xml #generated:15
+# view res/layout/activity_search_detail.xml #generated:1
+# view res/layout/activity_search_fragment.xml #generated:7
+# view res/layout/activity_store_type.xml #generated:11
+# view res/layout/activity_topic_detail.xml #generated:88
+# view res/layout/activity_topic_list.xml #generated:7
+-keep class com.njkj.yulian.ui.gui.swipetoloadlayout.SwipeToLoadLayout { <init>(...); }
+
+# view res/layout/activity_titanic.xml #generated:8
+-keep class com.njkj.yulian.ui.gui.titanic.TitanicTextView { <init>(...); }
+
+# view res/layout/activity_push_open.xml #generated:141
+# view res/layout/activity_push_open.xml #generated:182
+# view res/layout/activity_push_open.xml #generated:224
+# view res/layout/activity_push_open.xml #generated:265
+# view res/layout/activity_push_open.xml #generated:307
+# view res/layout/activity_push_open.xml #generated:40
+# view res/layout/activity_push_open.xml #generated:70
+# view res/layout/activity_push_setting.xml #generated:39
+-keep class com.njkj.yulian.ui.gui.togglebutton.button.ToggleButton { <init>(...); }
+
+# view res/layout/activity_media_recorder.xml #generated:48
+-keep class com.njkj.yulian.ui.gui.video.widget.ProgressView { <init>(...); }
+
+# view res/layout/personal_address.xml #generated:14
+# view res/layout/personal_address.xml #generated:21
+# view res/layout/personal_address.xml #generated:27
+-keep class com.njkj.yulian.ui.gui.wheel.WheelView { <init>(...); }
+
+# view res/layout/camerapreview.xml #generated:12
+-keep class com.njkj.yulian.utils.FaceMask { <init>(...); }
+
+# view res/layout/mylove_new.xml #generated:10
+# view res/layout/otherlove_new.xml #generated:8
+-keep class com.njkj.yulian.utils.PullToZoomListView { <init>(...); }
+
+# view res/layout/gooddetail.xml #generated:22
+-keep class com.njkj.yulian.utils.WrapContentHeightViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:75
+-keep class com.njkj.yulian.wxapi.WXEntryActivity { <init>(...); }
+
+# onClick res/layout/activity_camera_guide.xml #generated:30
+# onClick res/layout/activity_camera_guide.xml #generated:40
+# onClick res/layout/activity_camera_guide.xml #generated:60
+-keepclassmembers class * { *** onClick(...); }
+
+# onClick res/layout/setting.xml #generated:130
+# onClick res/layout/setting.xml #generated:15
+# onClick res/layout/setting.xml #generated:159
+# onClick res/layout/setting.xml #generated:193
+# onClick res/layout/setting.xml #generated:44
+# onClick res/layout/setting.xml #generated:82
+-keepclassmembers class * { *** onMyClick(...); }
+
