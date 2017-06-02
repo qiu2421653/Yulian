@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.CollectionMapper" >
+  <resultMap id="BaseResultMap" type="com.naga.yulian.entity.Collection" >
+    <id column="uuid" property="uuid" jdbcType="CHAR" />
+    <result column="expId" property="expId" jdbcType="CHAR" />
+    <result column="createrId" property="createrId" jdbcType="CHAR" />
+    <result column="createDate" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="updaterId" property="updaterId" jdbcType="CHAR" />
+    <result column="updateDate" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uuid, expId, createrId, createDate, updaterId, updateDate, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from collection
+    where uuid = #{uuid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from collection
+    where uuid = #{uuid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.naga.yulian.entity.Collection" >
+    insert into collection (uuid, expId, createrId, 
+      createDate, updaterId, updateDate, 
+      status)
+    values (#{uuid,jdbcType=CHAR}, #{expId,jdbcType=CHAR}, #{createrId,jdbcType=CHAR}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{updaterId,jdbcType=CHAR}, #{updateDate,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.naga.yulian.entity.Collection" >
+    insert into collection
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="expId != null" >
+        expId,
+      </if>
+      <if test="createrId != null" >
+        createrId,
+      </if>
+      <if test="createDate != null" >
+        createDate,
+      </if>
+      <if test="updaterId != null" >
+        updaterId,
+      </if>
+      <if test="updateDate != null" >
+        updateDate,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="expId != null" >
+        #{expId,jdbcType=CHAR},
+      </if>
+      <if test="createrId != null" >
+        #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null" >
+        #{updaterId,jdbcType=CHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.naga.yulian.entity.Collection" >
+    update collection
+    <set >
+      <if test="expId != null" >
+        expId = #{expId,jdbcType=CHAR},
+      </if>
+      <if test="createrId != null" >
+        createrId = #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null" >
+        updaterId = #{updaterId,jdbcType=CHAR},
+      </if>
+      <if test="updateDate != null" >
+        updateDate = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.naga.yulian.entity.Collection" >
+    update collection
+    set expId = #{expId,jdbcType=CHAR},
+      createrId = #{createrId,jdbcType=CHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      updaterId = #{updaterId,jdbcType=CHAR},
+      updateDate = #{updateDate,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=DECIMAL}
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+</mapper>

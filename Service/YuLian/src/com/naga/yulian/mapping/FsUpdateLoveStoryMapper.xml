@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsUpdateLoveStoryMapper">
+	<delete id="deleteLoveStory" parameterType="com.naga.yulian.entity.Experience">
+		delete from
+		experience
+		where uuid = #{uuid,jdbcType=CHAR}
+	</delete>
+	
+	<delete id="deleteTopic" parameterType="com.naga.yulian.entity.Experience">
+		delete from topic where expId=#{uuid,jdbcType=CHAR}
+	</delete>
+	
+	<delete id="deletePraise" parameterType="com.naga.yulian.entity.Experience">
+		delete from praise where topId=#{uuid,jdbcType=CHAR}
+	</delete>
+	
+	<delete id="deleteMedia" parameterType="com.naga.yulian.entity.Experience">
+		delete from media where fkId=#{uuid,jdbcType=CHAR}
+	</delete>
+	
+	<delete id="deleteReply" parameterType="com.naga.yulian.entity.Experience">
+		delete from reply WHERE topId=#{uuid,jdbcType=CHAR}
+	</delete>
+
+
+	<update id="updateLoveStory" parameterType="com.naga.yulian.entity.Experience">
+		update experience e1
+		set
+		e1.status ='20'
+		where
+		e1.createrid=(
+		select
+		e2.createrid from (select *
+		from experience) e2
+		where
+		e2.uuid=#{uuid,jdbcType=CHAR}
+		)
+		and
+		e1.status='10'
+		and
+		e1.uuid!=#{uuid,jdbcType=CHAR}
+	</update>
+
+	<update id="updateLoveStoryHide" parameterType="map">
+		UPDATE experience
+		e1
+		SET
+		e1.status ='20'
+		WHERE
+		e1.createDate !=
+		(SELECT e2.createDate FROM(
+		SELECT MAX(e3.createDate) createDate
+		FROM experience e3 WHERE
+		e3.status='10'
+		AND
+		e3.createrId=#{createrId,jdbcType=CHAR}
+		) e2)
+		AND
+		e1.status='10'
+		AND
+		e1.createrid=#{createrId,jdbcType=CHAR}
+
+
+	</update>
+</mapper>

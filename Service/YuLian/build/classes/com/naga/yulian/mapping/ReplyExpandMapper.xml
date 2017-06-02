@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.ReplyExpandMapper">
+	<select id="fsGetTopicComments" parameterType="map"
+		resultType="com.naga.yulian.vo.FsGetTopicCommentsResultListVo">
+		SELECT
+		t111.*, t4. COMMENT AS replyComment,
+		t4.fromUserId,
+		t4.fromName,
+		t4.toUserId,
+		t4.toName
+		FROM
+		(
+		SELECT
+		t1.uuid,
+		t1.content AS
+		COMMENT,
+		t2. NAME AS nickName,
+		t3.path AS hPic,
+		t1.createDate AS timeLag,
+		t2.userId AS userId
+		FROM
+		reply t1
+		LEFT JOIN USER t2 ON t1.createrId =
+		t2.uuid
+		LEFT JOIN media t3 ON t2.uuid = t3.fkId
+		WHERE
+		t1.toUserId IS NULL
+		AND t1.topId = #{infoId}
+		ORDER BY
+		t1.createDate DESC,
+		t1.uuid
+		LIMIT
+		#{commentPage},#{commentCount}
+		) AS t111
+		LEFT JOIN (
+		SELECT
+		t11.partentId,
+		t11.content AS COMMENT,
+		t12.userId AS fromUserId,
+		t12.
+		NAME AS fromName,
+		t13.userId AS toUserId,
+		t13. NAME AS toName
+		FROM
+		reply
+		t11
+		LEFT JOIN USER t12 ON t11.createrId = t12.uuid
+		LEFT JOIN USER t13
+		ON
+		t11.toUserId = t13.userid
+		WHERE
+		t11.toUserId IS NOT NULL
+		ORDER BY
+		t11.createDate
+		) t4 ON t111.uuid = t4.partentId
+	</select>
+
+	<select id="selectReplyByUserId" resultType="com.naga.yulian.vo.FsGetCommentVo"
+		parameterType="com.naga.yulian.entity.Reply">
+		SELECT
+		re.content AS COMMENT,
+		u. NAME AS nickName,
+		DATE_FORMAT(re.createDate,
+		'%m月%d日') AS commentDate,
+		DATE_FORMAT(re.createDate, '%T') AS
+		commentTime,
+		re.createDate AS
+		timeLag,
+		re.topId AS topicId,
+		m1.path AS
+		hPic,
+		(
+		SELECT
+		m.path
+		FROM
+		media m
+		WHERE
+		m.fkId = re.topId
+		ORDER BY
+		m.path
+		LIMIT 1
+		)AS topicThumb,
+		re.createrId AS userID
+		FROM
+		reply re
+		INNER JOIN
+		topic top
+		ON
+		top.uuid=re.topId
+		AND
+		top.createrId=#{createrId}
+		LEFT JOIN
+		USER u ON
+		re.createrId = u.uuid
+		LEFT JOIN
+		media m1 ON re.createrId = m1.`fkId`
+		ORDER BY
+		commentDate DESC
+		,commentTime DESC
+	</select>
+
+</mapper>

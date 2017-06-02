@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetRewardListExpandMapper" >
+
+  <select id="fsGetRewardListById" resultType="com.naga.yulian.vo.FsGetRewardListVo" parameterType="java.lang.String">
+    SELECT 
+      T2.uuid AS topicId,
+      T2.cover AS topicThumb,
+      IFNULL(T1.currency,'0') AS reward,
+      DATE_FORMAT(T1.createDate,'%m月%d日') AS rewardDate,
+      DATE_FORMAT(T1.createDate,'%T') AS rewardTime,
+      T1.createDate AS timeLag,
+      T3.name AS nickName,
+      T3.uuid AS userId,
+      T4.path AS hPic
+    FROM accounting T1
+    LEFT JOIN topic T2 ON T1.topId = T2.uuid 
+    LEFT JOIN user T3 ON T1.userId = T3.uuid
+    LEFT JOIN media T4 ON T3.uuid = T4.fkId
+    where
+      T1.userId = #{uuId}
+  </select>
+
+</mapper>

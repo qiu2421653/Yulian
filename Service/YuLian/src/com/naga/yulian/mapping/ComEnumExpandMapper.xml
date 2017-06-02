@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.ComEnumExpandMapper">
+  <select id="getEnumByClass" parameterType="string" resultType="com.naga.yulian.entity.ComEnum">
+	SELECT * FROM comenum
+	<where>
+		comClass = #{comClass,jdbcType=VARCHAR}
+    </where>
+    ORDER BY sort
+  </select>
+  
+  <select id="getEnumInfoByUserKeyWord" resultType="com.naga.yulian.vo.FsGetEnumInfoVo" parameterType="java.lang.String">
+    SELECT 
+      code AS type,
+      name AS typeName
+    FROM comenum
+    WHERE comClass=#{keyword}
+  </select>
+</mapper>

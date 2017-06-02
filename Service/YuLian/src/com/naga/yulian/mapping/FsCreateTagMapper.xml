@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsCreateTagMapper">
+
+	<insert id="createTags" parameterType="com.naga.yulian.entity.Tag">
+		insert into tag
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uuid != null">
+				uuid,
+			</if>
+			<if test="comClass != null">
+				comClass,
+			</if>
+			<if test="code != null">
+				code,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="createrId != null">
+				createrId,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="uuid != null">
+				#{uuid,jdbcType=CHAR},
+			</if>
+			<if test="comClass != null">
+				#{comClass,jdbcType=VARCHAR},
+			</if>
+			<if test="code != null">
+				#{code,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="createrId != null">
+				#{createrId,jdbcType=VARCHAR},
+			</if>
+			
+		</trim>
+	</insert>
+
+</mapper>

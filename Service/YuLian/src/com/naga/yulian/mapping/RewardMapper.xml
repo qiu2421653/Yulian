@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.RewardMapper" >
+  <resultMap id="BaseResultMap" type="com.naga.yulian.entity.Reward" >
+    <id column="uuid" property="uuid" jdbcType="CHAR" />
+    <result column="topId" property="topId" jdbcType="CHAR" />
+    <result column="currency" property="currency" jdbcType="INTEGER" />
+    <result column="createrId" property="createrId" jdbcType="CHAR" />
+    <result column="createDate" property="createDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uuid, topId, currency, createrId, createDate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from reward
+    where uuid = #{uuid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from reward
+    where uuid = #{uuid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.naga.yulian.entity.Reward" >
+    insert into reward (uuid, topId, currency, 
+      createrId, createDate)
+    values (#{uuid,jdbcType=CHAR}, #{topId,jdbcType=CHAR}, #{currency,jdbcType=INTEGER}, 
+      #{createrId,jdbcType=CHAR}, #{createDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.naga.yulian.entity.Reward" >
+    insert into reward
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="topId != null" >
+        topId,
+      </if>
+      <if test="currency != null" >
+        currency,
+      </if>
+      <if test="createrId != null" >
+        createrId,
+      </if>
+      <if test="createDate != null" >
+        createDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="topId != null" >
+        #{topId,jdbcType=CHAR},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=INTEGER},
+      </if>
+      <if test="createrId != null" >
+        #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.naga.yulian.entity.Reward" >
+    update reward
+    <set >
+      <if test="topId != null" >
+        topId = #{topId,jdbcType=CHAR},
+      </if>
+      <if test="currency != null" >
+        currency = #{currency,jdbcType=INTEGER},
+      </if>
+      <if test="createrId != null" >
+        createrId = #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.naga.yulian.entity.Reward" >
+    update reward
+    set topId = #{topId,jdbcType=CHAR},
+      currency = #{currency,jdbcType=INTEGER},
+      createrId = #{createrId,jdbcType=CHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP}
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+</mapper>

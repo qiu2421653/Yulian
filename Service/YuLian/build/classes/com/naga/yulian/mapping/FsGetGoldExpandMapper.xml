@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetGoldExpandMapper">
+	<select id="getTotalReply" resultType="BigDecimal"
+		parameterType="java.lang.String">
+		SELECT COUNT(uuid) FROM reply
+		WHERE toUserId =
+		#{userId,jdbcType=VARCHAR}
+            <![CDATA[AND createDate >= date_format(now(), '%Y-%m-%d 00:00:00')]]>  
+            <![CDATA[AND createDate <= date_format(now(), '%Y-%m-%d 23:59:59')]]>
+	</select>
+
+	<select id="getTotalPraise" resultType="BigDecimal"
+		parameterType="java.lang.String">
+		SELECT COUNT(uuid) FROM praise
+		WHERE createrId =
+		#{userId,jdbcType=VARCHAR}
+            <![CDATA[AND createDate >= date_format(now(), '%Y-%m-%d 00:00:00')]]>  
+            <![CDATA[AND createDate <= date_format(now(), '%Y-%m-%d 23:59:59')]]>
+	</select>
+
+	<select id="getGoldById" resultType="com.naga.yulian.vo.FsGetGoldVo"
+		parameterType="java.lang.String">
+		 <![CDATA[
+		SELECT
+		u1.`uuid`,
+		c1.`myScore` AS score,
+		c1.`isAll` AS isAll,
+		CASE WHEN t1.comment IS NULL THEN 0 ELSE t1.comment END AS totalReply,
+		CASE WHEN t1.fork IS NULL THEN 0 ELSE t1.fork END AS totalPraise,
+		u1.`currency` AS currency
+		FROM
+		USER u1
+		LEFT JOIN
+		(
+		SELECT COMMENT,fork,fkId FROM score
+		WHERE updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d')
+		)
+		t1
+		ON
+		u1.`uuid`=t1.fkId
+		LEFT JOIN
+		score c1
+		ON
+		u1.`uuid`=c1.fkId
+		WHERE
+		u1.`uuid`
+		=
+		#{uuId,jdbcType=VARCHAR}
+		]]>
+	</select>
+
+</mapper>

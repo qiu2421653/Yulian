@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetForkUsers">
+
+	<select id="fsGetForkUsers" parameterType="map"
+		resultType="com.naga.yulian.vo.FsGetForksVoOutDto">
+		SELECT u1.uuid AS userID,
+		u1.name AS nickName,
+		m1.path AS
+		hPic
+		FROM USER u1
+		LEFT JOIN
+		media m1
+		ON
+		u1.uuId=m1.fkId
+
+		WHERE u1.uuId IN(
+		SELECT
+		f1.userId AS fUid
+		FROM
+		follow f1
+		WHERE
+		f1.createrId=#{userId,jdbcType=CHAR}
+		AND f1.`status`=1
+		)
+		ORDER BY u1.`userId`
+	</select>
+
+</mapper>

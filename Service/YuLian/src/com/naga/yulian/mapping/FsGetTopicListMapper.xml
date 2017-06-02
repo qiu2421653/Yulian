@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetTopicListMapper">
+	<select id="getFsGetTopicListAdvertsVoList" resultType="com.naga.yulian.vo.FsGetTopicListAdvertsVo"
+		parameterType="map">
+		SELECT
+		r1.uuid AS infoId,
+		r1.`cover` AS url
+		FROM
+		recommen
+		r1		
+		ORDER BY
+		r1.createDate DESC
+		LIMIT 0,4
+	</select>
+
+	<select id="getFsGetTopicListFirstTagsVoList" resultType="com.naga.yulian.vo.FsGetTopicListFirstTagsVo"
+		parameterType="map">
+		select
+		c1.`uuid` AS tagID,
+		c1.name AS tag,
+		c1.remark AS url
+		from
+		comenum c1
+		where
+		c1.comClass = 'A_TAG'
+	</select>
+	<select id="getFsGetTopicListRecommTagsVoList" resultType="com.naga.yulian.vo.FsGetTopicListRecommTagsVo"
+		parameterType="map">
+		select
+		t1.name AS tag,
+		Max(m1.path) AS url
+		from
+		topic t1
+		left join
+		media m1
+		on
+		t1.uuid = m1.fkId
+		where
+		t1.type = '1'
+		GROUP BY t1.uuid
+		ORDER by t1.createDate desc
+	</select>
+	<select id="getFsGetTopicListTopicListVoList" resultType="com.naga.yulian.vo.FsGetTopicListTopicListVo"
+		parameterType="map">
+		SELECT
+		t1.name AS createDescription,
+		DATE_FORMAT(t1.createDate, '%Y年%m月%d日')
+		AS
+		createTime,
+		c.eEmotionalState
+		AS eEmotionalState,
+		m1.path AS hPic,
+		n1.num AS num,
+		CASE WHEN f1.status
+		IS
+		NULL THEN '0' ELSE f1.status END AS
+		isFork,
+		u1.name AS nickName,
+		m2.path AS themePic,
+		t1.createrId AS userID,
+		R.comment AS comments,
+		P.fork AS forks,
+		t1.uuid AS infoId,
+		t1.name AS
+		pushDesc,
+		t1.uuid AS
+		pushID
+		FROM experience t1
+
+		LEFT JOIN
+		(SELECT
+		MAX(RIGHT(tag,1)) AS
+		eEmotionalState,
+		expId
+		FROM
+		topic
+		WHERE
+		tag LIKE 'A%'
+		GROUP BY expId
+		) c
+		ON
+		c.expId = t1.uuid
+
+		LEFT JOIN
+		(
+		SELECT SUM(access) AS num,t1.expid FROM
+		topic t1,experience e1
+		WHERE t1.`expId`=e1.uuid
+		GROUP BY t1.`expId`
+		) n1
+		ON
+		n1.expId = t1.uuid
+
+		LEFT JOIN
+		USER u1
+		ON
+		t1.createrId = u1.uuid
+		LEFT JOIN
+		media m1
+		ON
+		t1.createrId = m1.fkId
+		LEFT JOIN
+		media m2
+		ON
+		t1.uuid = m2.fkId
+		LEFT JOIN
+		follow f1
+		ON
+		f1.userId = u1.uuid AND
+		f1.createrId =
+		#{userid,jdbcType=CHAR}
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(p1.uuid)
+		AS fork,
+		topid
+		FROM
+		praise p1
+		GROUP BY
+		topid
+		) P
+		ON
+		P.topid = t1.uuid
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(r1.uuid) AS COMMENT,
+		topid
+		FROM
+		reply r1
+		GROUP BY
+		topid
+		) R
+		ON
+		R.topid =
+		t1.uuid
+
+		GROUP BY t1.uuid
+		ORDER BY n1.num DESC
+
+	</select>
+
+
+	<select id="getFsRecommendTopicVoList" resultType="com.naga.yulian.vo.FsGetTopicListTopicListVo"
+		parameterType="map">
+		SELECT
+		t1.name AS createDescription,
+		DATE_FORMAT(t1.createDate, '%Y年%m月%d日')
+		AS createTime,
+		c.eEmotionalState AS eEmotionalState,
+		m1.path AS hPic,
+		CASE WHEN f1.status
+		IS
+		NULL THEN '0' ELSE f1.status END AS
+		isFork,
+		u1.name AS
+		nickName,
+		m2.path AS themePic,
+		t1.createrId AS userID,
+		R.comment AS
+		comments,
+		P.fork AS forks,
+		t1.uuid AS infoId,
+		t1.recommend
+		AS recommend
+		FROM
+		experience t1
+
+		LEFT JOIN
+		(SELECT
+		MAX(RIGHT(tag,1)) AS
+		eEmotionalState,
+		expId
+		FROM
+		topic
+		WHERE
+		tag LIKE 'A%'
+		GROUP BY expId
+		) c
+		ON
+		c.expId = t1.uuid
+
+		LEFT JOIN
+		USER u1
+		ON
+		t1.createrId = u1.uuid
+		LEFT JOIN
+		media m1
+		ON
+		t1.createrId =
+		m1.fkId
+		LEFT JOIN
+		media m2
+		ON
+		t1.uuid = m2.fkId
+		LEFT JOIN
+		follow f1
+		ON
+		f1.userId = u1.uuid AND
+		f1.createrId =
+		#{userid,jdbcType=CHAR}
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(p1.uuid)
+		AS fork,
+		topid
+		FROM
+		praise p1
+		GROUP BY
+		topid
+		) P
+		ON
+		P.topid = t1.uuid
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(r1.uuid) AS COMMENT,
+		topid
+		FROM
+		reply r1
+		GROUP BY
+		topid
+		) R
+		ON
+		R.topid =
+		t1.uuid
+		GROUP BY t1.uuid
+		HAVING t1.recommend=1
+		ORDER BY
+		t1.createDate DESC
+	</select>
+
+</mapper>

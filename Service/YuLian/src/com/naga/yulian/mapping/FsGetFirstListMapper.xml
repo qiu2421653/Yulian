@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetFirstListMapper">
+  <select id="getFsGetFirstList" parameterType="com.naga.yulian.vo.FirstListVo" resultType="Map">
+	SELECT t.tag,t.tagId,GROUP_CONCAT(t.url,"*") url FROM(SELECT
+       t1.`name` AS tag ,
+       t1.`uuid` AS tagId, 
+       t2.`cover` AS url
+
+    FROM 
+       comenum t1,
+       topic t2
+    WHERE 
+       t1.`comClass`='A_TAG' AND 
+       t2.tag=t1.code
+    ORDER BY t1.`code`,t2.`createDate` DESC) t GROUP BY  t.tag,t.tagId ORDER BY t.tagId
+	
+  </select>
+  
+   <select id="getFsGetAllTags" parameterType="map" resultType="com.naga.yulian.vo.FirstListVo">
+	SELECT 
+		m1.`uuid` AS tagId,
+		m1.`name` AS tag,
+		m1.`code` AS tagCode
+		FROM comenum m1
+		WHERE 
+		m1.`code` LIKE 'A%'	ORDER BY m1.`code` ASC
+	
+  </select>
+  
+   <select id="getFsGetUrlsByTag" parameterType="map" resultType="map">     
+		select 
+			t1.`cover` AS url 
+			from topic t1
+			where t1.tag=#{tagCode}
+			ORDER BY t1.createDate
+			limit 0,4	
+  </select>
+</mapper>

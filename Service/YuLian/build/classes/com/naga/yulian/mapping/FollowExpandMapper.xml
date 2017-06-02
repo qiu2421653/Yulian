@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FollowExpandMapper">
+	<delete id="deleteById" parameterType="map">
+		DELETE FROM Follow WHERE
+		userId = #{expId,jdbcType=VARCHAR} AND createrId =
+		#{userId,jdbcType=VARCHAR}
+	</delete>
+
+	<delete id="updateById" parameterType="map">
+		update follow
+		set status =0
+		where
+		userId = #{expId,jdbcType=VARCHAR} AND createrId =
+		#{userId,jdbcType=VARCHAR}
+	</delete>
+
+</mapper>

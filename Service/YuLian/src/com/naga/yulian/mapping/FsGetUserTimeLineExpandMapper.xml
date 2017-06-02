@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetUserTimeLineExpandMapper">
+    <select id="gethPicByFkId" resultType="string"
+            parameterType="java.lang.String">
+            SELECT path FROM media WHERE fkId = #{fkId,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getUuidByUserId" resultType="string"
+            parameterType="java.lang.String">
+            SELECT uuid FROM user WHERE userId = #{userId,jdbcType=VARCHAR}
+    </select>
+    
+    <select id="getTopicThumbById" resultType="string"
+            parameterType="java.lang.String">
+            SELECT
+				path
+			FROM
+				experience t0
+			LEFT JOIN	media t1 ON t0.uuid = t1.fkId
+			WHERE t0.createrId=#{userId,jdbcType=VARCHAR}
+			AND t0.status = 10
+    </select>
+    
+    <select id="fsGetUserTimeLine" parameterType="string" resultType="com.naga.yulian.vo.FsGetUserTimeLineOutDTOTimeListVo">
+		SELECT
+			t1.content AS content,
+			t1.createDate AS date,
+			t1.createDate AS time,
+			t1.uuid AS topicId,
+			GROUP_CONCAT(t2.name) AS tag
+		FROM
+			experience t0
+		LEFT JOIN	topic t1 ON t0.uuid = t1.expId
+		LEFT JOIN tag t2 ON FIND_IN_SET(t2.code,t1.tag)
+		<where>
+			t0.createrId=#{userId}
+			AND t0.status = 10
+			AND FIND_IN_SET('A_TAG',t2.comClass)
+	    </where>
+	    GROUP BY t1.uuid
+		ORDER BY t1.createDate DESC
+	</select>
+</mapper>

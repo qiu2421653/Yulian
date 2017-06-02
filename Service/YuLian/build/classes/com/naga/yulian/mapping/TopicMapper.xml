@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.TopicMapper" >
+  <resultMap id="BaseResultMap" type="com.naga.yulian.entity.Topic" >
+    <id column="uuid" property="uuid" jdbcType="CHAR" />
+    <result column="expId" property="expId" jdbcType="CHAR" />
+    <result column="cover" property="cover" jdbcType="CHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="createrId" property="createrId" jdbcType="CHAR" />
+    <result column="createDate" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="updaterId" property="updaterId" jdbcType="CHAR" />
+    <result column="updateDate" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="DECIMAL" />
+    <result column="gps" property="gps" jdbcType="VARCHAR" />
+    <result column="tag" property="tag" jdbcType="VARCHAR" />
+    <result column="recommend" property="recommend" jdbcType="DECIMAL" />
+    <result column="type" property="type" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uuid, expId, cover, name, content, createrId, createDate, updaterId, updateDate, 
+    status, gps, tag, recommend, type
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from topic
+    where uuid = #{uuid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from topic
+    where uuid = #{uuid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.naga.yulian.entity.Topic" >
+    insert into topic (uuid, expId, cover, name, 
+      content, createrId, createDate, 
+      updaterId, updateDate, status, 
+      gps, tag, recommend, 
+      type)
+    values (#{uuid,jdbcType=CHAR}, #{expId,jdbcType=CHAR}, #{cover,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{createrId,jdbcType=CHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{updaterId,jdbcType=CHAR}, #{updateDate,jdbcType=TIMESTAMP}, #{status,jdbcType=DECIMAL}, 
+      #{gps,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, #{recommend,jdbcType=DECIMAL}, 
+      #{type,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.naga.yulian.entity.Topic" >
+    insert into topic
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="expId != null" >
+        expId,
+      </if>
+      <if test="cover != null" >
+        cover,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="createrId != null" >
+        createrId,
+      </if>
+      <if test="createDate != null" >
+        createDate,
+      </if>
+      <if test="updaterId != null" >
+        updaterId,
+      </if>
+      <if test="updateDate != null" >
+        updateDate,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="gps != null" >
+        gps,
+      </if>
+      <if test="tag != null" >
+        tag,
+      </if>
+      <if test="recommend != null" >
+        recommend,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="expId != null" >
+        #{expId,jdbcType=CHAR},
+      </if>
+      <if test="cover != null" >
+        #{cover,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="createrId != null" >
+        #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null" >
+        #{updaterId,jdbcType=CHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="gps != null" >
+        #{gps,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null" >
+        #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend != null" >
+        #{recommend,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.naga.yulian.entity.Topic" >
+    update topic
+    <set >
+      <if test="expId != null" >
+        expId = #{expId,jdbcType=CHAR},
+      </if>
+      <if test="cover != null" >
+        cover = #{cover,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="createrId != null" >
+        createrId = #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null" >
+        updaterId = #{updaterId,jdbcType=CHAR},
+      </if>
+      <if test="updateDate != null" >
+        updateDate = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="gps != null" >
+        gps = #{gps,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null" >
+        tag = #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="recommend != null" >
+        recommend = #{recommend,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.naga.yulian.entity.Topic" >
+    update topic
+    set expId = #{expId,jdbcType=CHAR},
+      cover = #{cover,jdbcType=CHAR},
+      name = #{name,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      createrId = #{createrId,jdbcType=CHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      updaterId = #{updaterId,jdbcType=CHAR},
+      updateDate = #{updateDate,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=DECIMAL},
+      gps = #{gps,jdbcType=VARCHAR},
+      tag = #{tag,jdbcType=VARCHAR},
+      recommend = #{recommend,jdbcType=DECIMAL},
+      type = #{type,jdbcType=DECIMAL}
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsSearchTagMapper">
+	<select id="getFsSearchTagVoList" resultType="com.naga.yulian.vo.FsSearchTagDTOVo"
+		parameterType="map">
+		select
+		c1.name As tagDesc,
+		c1.uuid As tagID
+		from
+		tag c1
+		where
+		c1.name LIKE '%${content}%'
+	</select>
+</mapper>

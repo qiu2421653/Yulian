@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsCreateLoveMapper">
+	<update id="updateExperience" parameterType="com.naga.yulian.entity.Experience">
+		update experience
+		set
+		status = #{status,jdbcType=DECIMAL}
+		WHERE UUID
+		=#{uuid,jdbcType=CHAR}
+	</update>
+
+	<insert id="createLove" parameterType="com.naga.yulian.entity.Experience">
+		insert into experience
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uuid != null">
+				uuid,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="createrId != null">
+				createrId,
+			</if>
+			<if test="createDate != null">
+				createDate,
+			</if>
+			<if test="updaterId != null">
+				updaterId,
+			</if>
+			<if test="updateDate != null">
+				updateDate,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="uuid != null">
+				#{uuid,jdbcType=CHAR},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR},
+			</if>
+			<if test="createrId != null">
+				#{createrId,jdbcType=CHAR},
+			</if>
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updaterId != null">
+				#{updaterId,jdbcType=CHAR},
+			</if>
+			<if test="updateDate != null">
+				#{updateDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=DECIMAL},
+			</if>
+		</trim>
+	</insert>
+	<insert id="createLovePath" parameterType="com.naga.yulian.entity.Media">
+		insert into media
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uuid != null">
+				uuid,
+			</if>
+			<if test="fkId != null">
+				fkId,
+			</if>
+			<if test="path != null">
+				path,
+			</if>
+			<if test="content != null">
+				content,
+			</if>
+			<if test="height != null">
+				height,
+			</if>
+			<if test="width != null">
+				width,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="uuid != null">
+				#{uuid,jdbcType=CHAR},
+			</if>
+			<if test="fkId != null">
+				#{fkId,jdbcType=CHAR},
+			</if>
+			<if test="path != null">
+				#{path,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=VARCHAR},
+			</if>
+			<if test="height != null">
+				#{height,jdbcType=VARCHAR},
+			</if>
+			<if test="width != null">
+				#{width,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+</mapper>

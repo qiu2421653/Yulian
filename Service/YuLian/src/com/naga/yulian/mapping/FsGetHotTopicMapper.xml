@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetHotTopicMapper">
+
+	<select id="getHotTopicById" parameterType="map"
+		resultType="com.naga.yulian.vo.FsGetHotTopicListOutVo">
+		SELECT
+		t1.content AS content,
+		t1.createDate AS createTime,
+		t1.`uuid` AS
+		infoId,
+		GROUP_CONCAT(t2.name) AS tag,
+		t2.uuid AS tagId,
+		t3.path AS hPic,
+		t1.createrId AS userId,
+		t4.name AS nickName,
+		(
+		SELECT path FROM
+		media
+		WHERE fkId=#{topicId} LIMIT 0,1
+		) AS url,
+		(SELECT COUNT(0) FROM praise
+		WHERE
+		topId=t1.uuid ) AS isFork,
+		(SELECT
+		COUNT(0) FROM reply WHERE topId
+		=t1.uuid) AS isComment
+		FROM
+		topic
+		t1
+		LEFT JOIN tag t2 ON
+		FIND_IN_SET(t2.code,t1.tag)
+		LEFT JOIN media t3
+		ON
+		t1.createrId = t3.fkId
+		LEFT JOIN USER t4 ON t1.createrId = t4.uuid
+		<where>
+			t1.uuid=#{topicId}
+		</where>
+	</select>
+
+	<select id="getHotTopicId" parameterType="map" resultType="String">
+		SELECT topId FROM praise where   status !=1 GROUP BY topid
+	</select>
+
+
+</mapper>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.ScoreMapper">
+
+	<insert id="insert" parameterType="com.naga.yulian.entity.Score">
+		insert into score (uuid, fkId,
+		updateDate,
+		isAll)
+		values
+		(#{uuid,jdbcType=CHAR},
+		#{fkId,jdbcType=VARCHAR},
+		SYSDATE(),
+		#{isAll,jdbcType=DECIMAL}
+		)
+	</insert>
+
+	<update id="updateAllScore" parameterType="Map">
+		UPDATE score SET
+		myScore=myScore+50,isAll=1 WHERE isAll=0 AND
+		fkId=#{uuId};
+	</update>
+
+
+	<select id="selectUpdateState" parameterType="Map" resultType="Integer">
+		SELECT
+		(CASE WHEN s.updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d') THEN 1
+		ELSE 0
+		END) AS state
+		FROM score s
+		WHERE
+		fkId=#{uuId}
+
+	</select>
+	<update id="updateTopicScore" parameterType="Map">
+		<![CDATA[
+			UPDATE score
+			SET myScore=myScore+20,post=post+1 WHERE post<3 AND
+			fkId=#{uuId}
+			AND
+			updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d');
+		]]>
+	</update>
+	<update id="updateTopicAndTagScore" parameterType="Map">
+		<![CDATA[
+				UPDATE score SET myscore= CASE WHEN post<3 THEN myscore+30
+				  ELSE myscore+10
+				 END,
+				 post= post+1,			 
+				 tag=tag+1
+				WHERE 	
+				 fkId=#{uuId}
+				AND updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d')
+	  			AND tag<3;
+	  	]]>
+	</update>
+
+	<update id="updateTopicDateScore" parameterType="Map">
+		<![CDATA[
+			UPDATE score
+			SET myScore=myScore+20,post=1,tag=0,comment=0,fork=0,
+			updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d')		
+			 WHERE 
+			fkId=#{uuId}
+		]]>
+	</update>
+	<update id="updateTopicAndTagDateScore" parameterType="Map">
+		<![CDATA[
+				UPDATE score SET myscore= myscore+30,
+				 post= 1,			 
+				 tag=1,
+				 comment=0,
+				 fork=0,
+				 updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d')
+				WHERE 	
+				 fkId=#{uuId}
+	  	]]>
+	</update>
+
+	<update id="updateForkScore" parameterType="Map">
+		<![CDATA[
+			UPDATE score
+			SET myScore=myScore+5,fork=fork+1 WHERE fork<10 AND
+			fkId=#{uuId}
+			AND
+			updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d');
+		]]>
+	</update>
+	<update id="updateForkDateScore" parameterType="Map">
+		<![CDATA[
+			UPDATE score
+			SET myScore=myScore+5,
+			post=0,tag=0,comment=0,fork=1,
+			 updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d')
+			WHERE 
+			fkId=#{uuId};
+	  	]]>
+	</update>
+
+	<update id="updateCommentScore" parameterType="Map">
+		<![CDATA[
+			UPDATE score
+			SET myScore=myScore+5,comment=comment+1 WHERE comment<10 AND
+			fkId=#{uuId}
+			AND
+			updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d');
+		]]>
+	</update>
+	<update id="updateCommentDateScore" parameterType="Map">
+		<![CDATA[
+			UPDATE score
+			SET myScore=myScore+5,
+			post=0,tag=0,comment=1,fork=0,
+			 updateDate=DATE_FORMAT(SYSDATE(),'%Y-%m-%d')
+			WHERE 
+			fkId=#{uuId};
+	  	]]>
+	</update>
+
+	<update id="updateFollow" parameterType="Map">
+		UPDATE score SET
+		firstFollow=firstFollow+1 ,
+		myScore=myScore+20
+		WHERE fkid=#{uuId}
+		AND
+		0=(SELECT COUNT(1)
+		FROM follow WHERE userId=#{uuId});
+	</update>
+
+	<update id="updateAllUserAddScore" parameterType="Map">
+		UPDATE score SET myScore=myScore+20 WHERE fkId IN(
+		SELECT t.fkId FROM (
+		SELECT COUNT(1) AS cou,userId AS fkId FROM follow WHERE
+		STATUS=1 GROUP BY userid ORDER BY cou DESC LIMIT 10
+		) t
+		);
+
+	</update>
+
+
+</mapper>

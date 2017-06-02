@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetNearUsersMapper">
+	<select id="getNearUsersByDis" parameterType="map"
+		resultType="com.naga.yulian.vo.FsGetNearUsersOutVo">
+		<![CDATA[
+		SELECT 
+		  u1.uuid AS userId,
+		  u1.name AS nickName,
+		  u1.longitude AS longitude,
+		  u1.latitude AS latitude,
+		  m1.path AS hPic
+		 FROM USER u1,
+		 	media m1
+			WHERE  u1.uuid=m1.fkId
+				AND u1.longitude <> 0
+				AND  u1.longitude >	#{minLon}
+				AND  u1.longitude < #{maxLon}
+				AND  u1.latitude > #{minLat}
+				AND  u1.latitude < #{maxLat}
+				AND  u1.UUID <> #{userId}
+				AND m1.`path` <> ''
+			ORDER BY ACOS(SIN((#{lat} *	3.1415) / 180 ) * SIN(( u1.latitude * 3.1415) /	180 )
+			+COS((#{lat}*3.1415) / 180 ) * COS(( u1.latitude * 3.1415) / 180 )
+			*COS((#{lon} *3.1415) / 180 - ( u1.longitude * 3.1415) / 180 ) )
+			* 6380 ASC
+		]]>
+	</select>
+</mapper>

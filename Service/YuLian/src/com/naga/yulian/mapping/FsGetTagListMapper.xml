@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetTagListMapper">
+	<select id="getFsGetTagListVoList" resultType="com.naga.yulian.vo.FsGetTagListVoOutDTO"
+		parameterType="map">
+		SELECT
+		R.comment AS COMMENT,
+		DATE_FORMAT(t1.createDate, '%Y年%m月%d日') AS
+		createTime,
+		P.fork AS fork,
+		'550' AS height,
+		u1.name AS nickName,
+		t1.uuid
+		AS topicId,
+		MAX(m1.path) AS url
+		FROM
+		topic t1
+		LEFT JOIN
+		USER u1
+		ON
+		t1.createrId = u1.uuid
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(p1.uuid) AS fork,
+		topid
+		FROM
+		praise p1
+
+		GROUP BY topId,createrId
+		) P
+		ON
+		P.topid = t1.uuid
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(r1.uuid) AS COMMENT,
+		topid
+		FROM
+		reply r1
+		GROUP BY
+		topid
+		) R
+		ON
+		R.topid = t1.uuid
+		LEFT JOIN
+		media m1
+		ON
+		t1.uuid = m1.fkId
+		LEFT JOIN
+		tag c1
+		ON
+		t1.tag = c1.code
+		where c1.uuid = #{tag,jdbcType=CHAR}
+		GROUP BY t1.uuid
+		ORDER BY t1.createDate
+		DESC
+	</select>
+
+</mapper>

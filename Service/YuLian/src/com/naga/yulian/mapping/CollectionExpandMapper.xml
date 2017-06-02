@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.CollectionExpandMapper">
+  <delete id="deleteById" parameterType="map" >
+    DELETE FROM collection WHERE expId = #{expId,jdbcType=VARCHAR} AND createrId = #{userId,jdbcType=VARCHAR}
+  </delete>
+</mapper>

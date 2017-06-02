@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.AccountingExpandMapper">
+	<select id="getGoldDetailList" parameterType="com.naga.yulian.entity.Accounting"
+		resultType="com.naga.yulian.vo.FsGetGoldDetailVo">
+		SELECT
+		T1.currencyBefore+T1.currency AS curAmount,
+		T1.createDate DATETIME,
+		T1.type,
+		CASE T1.type
+		WHEN 1 THEN '打赏转出'
+		WHEN 2
+		THEN '打赏转入'
+		ELSE '充值转入'
+		END AS description,
+		T1.currency AS oprAmount
+		FROM
+		accounting T1
+		WHERE
+		(T1.createrId =#{createrid} AND t1.type=1)
+		OR
+		(T1.createrId = #{createrid} AND t1.type=2)
+		ORDER BY DATETIME DESC
+	</select>
+</mapper>

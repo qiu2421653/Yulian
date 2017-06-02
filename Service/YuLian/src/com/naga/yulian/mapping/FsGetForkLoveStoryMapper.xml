@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetForkLoveStoryMapper">
+	<select id="getFsGetForkLoveStory" resultType="com.naga.yulian.vo.FsGetForkLoveStoryOutDtoVo"
+		parameterType="map">
+		select
+		t1.`createrId` AS userId,
+		t1.status as isLock,
+		t1.createDate As createTime,
+		t1.name As loveDesc,
+		t1.uuid As topicId,
+		m1.path AS thumb
+		from
+		follow f1
+		inner join
+		experience t1
+		on
+		f1.userId =
+		t1.createrId and t1.status = 10
+		inner join
+		user u1
+		on
+		f1.createrId =
+		u1.uuid
+		left join
+		media m1
+		on
+		t1.uuid =
+		m1.fkId
+		where
+		f1.createrId =
+		#{userid,jdbcType=CHAR}
+		AND
+		f1.`status`=1
+		order by
+		f1.createDate
+	</select>
+	<select id="getForkAndFun" resultType="map" parameterType="map">
+		select
+		u1.uuid,
+		case when P1.forkNum is null then 0 else P1.forkNum end
+		AS forkNum,
+		case when P2.funsNum is null then 0 else P2.funsNum end AS
+		funsNum
+		from
+		user u1
+		Left Join
+		(select
+		count(f1.status) AS forkNum,
+		f1.createrId
+		from
+		follow f1
+		where
+		f1.createrId = #{userid,jdbcType=CHAR}
+		group by
+		f1.createrId
+		) P1
+		On
+		P1.createrId = u1.uuid
+		Left Join
+		(select
+		count(f1.status) AS funsNum,
+		f1.userId
+		from
+		follow f1
+		where
+		f1.userId =
+		#{userid,jdbcType=CHAR}
+		group by
+		f1.userId
+		) P2
+		On
+		P2.userId = u1.uuid
+		where
+		u1.uuid = #{userid,jdbcType=CHAR}
+	</select>
+
+	<select id="getForkFunAndIsFollow" resultType="map"
+		parameterType="map">
+		select
+		u1.uuid,
+		case when P1.forkNum is null then 0 else
+		P1.forkNum end AS forkNum,
+		case when P2.funsNum is null then 0 else
+		P2.funsNum end AS funsNum,
+		case when d1.isFollow is null then 0 else 1
+		end as isFollow
+		from
+		user u1
+		Left Join
+		(SELECT
+		COUNT(f1.status)
+		AS forkNum,
+		f1.createrId
+		FROM
+		follow f1
+		WHERE
+		f1.userId =
+		#{userid,jdbcType=CHAR}
+		AND
+		f1.status=1
+		GROUP BY
+		f1.userId
+		) P1
+		On
+		P1.createrId =
+		u1.uuid
+		LEFT JOIN
+		(
+		SELECT
+		COUNT(1) AS isFollow ,
+		w1.userId
+		FROM
+		follow
+		w1
+		WHERE createrId=#{createrid,jdbcType=CHAR}
+		AND
+		STATUS=1
+		AND
+		userId=#{userid,jdbcType=CHAR}
+		) d1
+		ON
+		d1.userId = u1.uuid
+		Left Join
+		(select
+		count(f1.status) AS funsNum,
+		f1.userId
+		from
+		follow f1
+		where
+		f1.userId
+		= #{userid,jdbcType=CHAR}
+		group by
+		f1.userId
+		)
+		P2
+		On
+		P2.userId =
+		u1.uuid
+		where
+		u1.uuid = #{userid,jdbcType=CHAR}
+	</select>
+
+</mapper>

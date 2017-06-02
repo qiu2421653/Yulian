@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.ReplyMapper" >
+  <resultMap id="BaseResultMap" type="com.naga.yulian.entity.Reply" >
+    <id column="uuid" property="uuid" jdbcType="CHAR" />
+    <result column="topId" property="topId" jdbcType="CHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="toUserId" property="toUserId" jdbcType="CHAR" />
+    <result column="createrId" property="createrId" jdbcType="CHAR" />
+    <result column="createDate" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="updaterId" property="updaterId" jdbcType="CHAR" />
+    <result column="updateDate" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="DECIMAL" />
+    <result column="partentId" property="partentId" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uuid, topId, content, toUserId, createrId, createDate, updaterId, updateDate, status, 
+    partentId
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from reply
+    where uuid = #{uuid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from reply
+    where uuid = #{uuid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.naga.yulian.entity.Reply" >
+    insert into reply (uuid, topId, content, 
+      toUserId, createrId, createDate, 
+      updaterId, updateDate, status, 
+      partentId)
+    values (#{uuid,jdbcType=CHAR}, #{topId,jdbcType=CHAR}, #{content,jdbcType=VARCHAR}, 
+      #{toUserId,jdbcType=CHAR}, #{createrId,jdbcType=CHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{updaterId,jdbcType=CHAR}, #{updateDate,jdbcType=TIMESTAMP}, #{status,jdbcType=DECIMAL}, 
+      #{partentId,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.naga.yulian.entity.Reply" >
+    insert into reply
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="topId != null" >
+        topId,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="toUserId != null" >
+        toUserId,
+      </if>
+      <if test="createrId != null" >
+        createrId,
+      </if>
+      <if test="createDate != null" >
+        createDate,
+      </if>
+      <if test="updaterId != null" >
+        updaterId,
+      </if>
+      <if test="updateDate != null" >
+        updateDate,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="partentId != null" >
+        partentId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="topId != null" >
+        #{topId,jdbcType=CHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="toUserId != null" >
+        #{toUserId,jdbcType=CHAR},
+      </if>
+      <if test="createrId != null" >
+        #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null" >
+        #{updaterId,jdbcType=CHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="partentId != null" >
+        #{partentId,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.naga.yulian.entity.Reply" >
+    update reply
+    <set >
+      <if test="topId != null" >
+        topId = #{topId,jdbcType=CHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="toUserId != null" >
+        toUserId = #{toUserId,jdbcType=CHAR},
+      </if>
+      <if test="createrId != null" >
+        createrId = #{createrId,jdbcType=CHAR},
+      </if>
+      <if test="createDate != null" >
+        createDate = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updaterId != null" >
+        updaterId = #{updaterId,jdbcType=CHAR},
+      </if>
+      <if test="updateDate != null" >
+        updateDate = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="partentId != null" >
+        partentId = #{partentId,jdbcType=CHAR},
+      </if>
+    </set>
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.naga.yulian.entity.Reply" >
+    update reply
+    set topId = #{topId,jdbcType=CHAR},
+      content = #{content,jdbcType=VARCHAR},
+      toUserId = #{toUserId,jdbcType=CHAR},
+      createrId = #{createrId,jdbcType=CHAR},
+      createDate = #{createDate,jdbcType=TIMESTAMP},
+      updaterId = #{updaterId,jdbcType=CHAR},
+      updateDate = #{updateDate,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=DECIMAL},
+      partentId = #{partentId,jdbcType=CHAR}
+    where uuid = #{uuid,jdbcType=CHAR}
+  </update>
+</mapper>

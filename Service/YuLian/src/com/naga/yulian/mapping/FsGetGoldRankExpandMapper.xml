@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.FsGetGoldRankExpandMapper">
+
+	<select id="fsGetGoldRankList" resultType="com.naga.yulian.vo.FsGEtGoldRankVo"
+		parameterType="java.lang.String">
+		SELECT t1.top,t1.gold,t1.nickName,t1.uuId,m1.`path` AS
+		hPic,
+		IFNULL(s1.`myScore`,'0') AS point
+		FROM (
+		SELECT
+		(@rownum:=@rownum+1) AS top,
+		IFNULL(T1.currency,'0') AS gold ,
+		T1.name
+		AS nickName,
+		t1.uuid AS UUID
+		FROM
+		USER T1
+
+		,(SELECT @rownum:=0) AS it
+		ORDER
+		BY T1.currency DESC
+		)t1
+		LEFT JOIN media m1
+		ON
+		t1.uuid=m1.`fkId`
+		LEFT JOIN
+		score s1
+		ON
+		t1.uuid=s1.`fkId`
+
+		ORDER BY T1.top
+
+	</select>
+
+	<select id="getUserTop" resultType="com.naga.yulian.vo.FsGEtGoldRankVo"
+		parameterType="java.lang.String">
+
+		SELECT t1.top,t1.gold,t1.nickName,t1.uuid,m1.`path` AS
+		hPic,
+		IFNULL(s1.`myScore`,'0') AS POINT
+		FROM (
+		SELECT
+		(@rownum:=@rownum+1) AS top,
+		IFNULL(T1.currency,'0') AS gold ,
+		T1.name
+		AS nickName,
+		t1.uuid AS UUID
+		FROM
+		USER T1
+
+		,(SELECT @rownum:=0) AS it
+		ORDER
+		BY T1.currency DESC
+		)t1
+		LEFT JOIN media m1
+		ON
+		t1.uuid=m1.`fkId`
+		LEFT JOIN
+		score s1
+		ON
+		t1.uuid=s1.`fkId`
+		WHERE t1.uuId=#{uuId}
+
+	</select>
+
+
+
+</mapper>

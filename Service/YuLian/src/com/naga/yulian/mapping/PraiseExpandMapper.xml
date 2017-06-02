@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.naga.yulian.dao.PraiseExpandMapper">
+
+	<delete id="deleteByTopId" parameterType="map">
+		DELETE FROM praise
+		WHERE topId = #{infoId,jdbcType=VARCHAR} AND createrId =
+		#{userId,jdbcType=VARCHAR}
+	</delete>
+
+	<select id="fsGetTopicForks" parameterType="map"
+		resultType="com.naga.yulian.vo.FsGetTopicForksResultListVo">
+		SELECT
+		t1.createDate AS timeLag,t3.path AS hPic,t2.name AS
+		nickName,t2.uuid AS userId,(SELECT COUNT(0) FROM follow WHERE
+		createrId=#{userId} AND userId=t2.uuid) AS isFollowed
+		FROM
+		praise t1
+		LEFT JOIN USER t2 ON t1.createrId = t2.uuid
+		LEFT JOIN media t3 ON
+		t2.uuid = t3.fkId
+		<where>
+			t1.topId = #{infoId,jdbcType=VARCHAR}
+		</where>
+		GROUP BY t1.`createrId`,t1.`topId`
+		ORDER BY t1.createDate DESC
+	</select>
+
+	<select id="selectPraiseByUserId" resultType="com.naga.yulian.vo.FsGetForksVo"
+		parameterType="com.naga.yulian.entity.Praise">
+		SELECT
+		DATE_FORMAT(T1.createDate,'%m月%d日') AS forkDate,
+		DATE_FORMAT(T1.createDate,'%T') AS forkTime,
+		T1.createDate AS timeLag,
+		u1.name AS nickName,
+		T2.uuid AS topicId,
+		T2.cover AS topicThumb,
+		T1.createrId AS userId,
+		m1.path AS hPic
+		FROM praise T1
+		LEFT JOIN USER u1
+		ON T1.createrId = u1.uuid
+		LEFT JOIN topic T2 ON T1.topId = T2.uuid
+		LEFT JOIN media m1 ON u1.uuid=m1.fkid
+		WHERE T2.createrId = #{createrId}
+
+	</select>
+</mapper>
